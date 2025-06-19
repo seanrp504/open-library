@@ -1,75 +1,14 @@
 import httpx
-from pydantic import BaseModel, model_validator, field_validator
-from pydantic_extra_types.isbn import ISBN
+from openLibrary.models.books import (
+    ISBN13, 
+    coverSize,
+    LCCN, 
+    OLID
+    )
+from openLibrary.models.search import OLSearch
+from openLibrary.common.exceptions import OLClientError
 from typing import Optional
-import re
-
-olwid_pattern = re.compile(r'^OL\d+[MW]$')
-oleid_pattern = re.compile(r'')
-
-class bookID(BaseModel):
-    isbn10: Optional[ISBN]
-    isbn13: Optional[ISBN]
-    olid: Optional[str]
-    lccn: Optional[str]
-
-    @field_validator("olid")
-    @classmethod
-    def validate_olwid(cls, olid: str) -> str:
-        clean = re.sub(r'[\s-]', "", olid)
-        if not re.fullmatch(olwid_pattern, clean):
-            raise ValueError('Invalid OLID')
-        return olid
-
-
-    @model_validator(mode="after")
-    @classmethod
-    def validate_min_one(cls, values):
-        if not any(values.values()):
-            raise ValueError('At least one value must be present to create a bookID object')
-        return values
-
-class bookISBN(BaseModel):
-    isbn: ISBN
-
-    @model_validator(mode="before")
-    @classmethod
-    def validate(cls, values):
-        if values.isbn == 10:
-            values.isbn = ISBN.convert_isbn10_to_isbn13(values.isbn)
-        return values
-    
-class bookOLID(BaseModel):
-    olid: str
-
-    @model_validator(mode="before")
-    @classmethod
-    def validate(cls, value):
-        clean = re.sub(r'[\s-]', "", value.olid)
-        if not re.fullmatch(olwid_pattern, clean):
-            raise ValueError('Invalid OLID')
-        return clean
-
-
-class coverSize(BaseModel):
-    """ 
-    size options [S, M, L]
-    """
-    size: str
-
-    @field_validator("size")
-    @classmethod
-    def validate_size(cls, size):
-        if size != 'L' or size != 'M' or size != 'S':
-            raise ValueError("Unkown Size")
-        return size
-    
-
-
-class OLError(Exception):
-    """ Generic OL Client Error"""
-    pass
-        
+from urllib.parse import urlencode
 
 
 
@@ -83,12 +22,14 @@ class openLibrary:
     some models accept multiple types of fields but only one value
     """
 
-    base_url = 'openlibrary.org'
-    isbn = 'isbn'
-    olid = 'olid'
-    lccn = 'lccn'
-    works = 'works'
-    covers = 'covers'
+    BASE_DOMAIN = 'openlibrary.org'
+    _ISBN = 'isbn'
+    _OLID = 'olid'
+    _LCCN = 'lccn'
+    _WORKS = 'works'
+    _COVERS = 'covers'
+    _AUTHORS = 'authors'
+    _SEARCH = 'search.json'
 
     TIMEOUT_CONFIG = httpx.Timeout(10.0, connect=4.0, read=6.0)
 
@@ -97,38 +38,98 @@ class openLibrary:
             self.TIMEOUT_CONFIG = timeout
 
         self.client = httpx.Client(timeout=self.TIMEOUT_CONFIG, follow_redirects=True)
-    
 
-    def getBookByISBN(self, book: bookISBN = None):
-        resp = None
-        url = f'https://{self.base_url}/{self.isbn}'
-        
-        if book:
-            url = f"{url}/{book.isbn}.json"
-            
+    def _get(self, path, subdomain: str =  None, params: dict = {}) -> httpx.Response:
 
-        if not url.endswith('.json'):
-            raise OLError("Unable to build open lirbary url")
+        url = f"https://{subdomain + '.' if subdomain is not None else ''}{self.BASE_DOMAIN}/{path}"
 
-        resp = self.client.get(url)
-        resp.raise_for_status() 
-        return resp
-    
-
-        
-    def getCoverByISBN(self, book: bookISBN, size: coverSize):
-        resp = None
-        url = f'https://{self.covers}.{self.base_url}/'
-
-        if book and size:
-            url = f"{url}/{self.isbn}/{book.isbn}-{size.size}.jpg"
-
-        if not url.endswith('.jpg'):
-            raise OLError("Unable to build open library url")
-        
-        resp = self.client.get(url)
+        resp = self.client.get(urlencode(url), params=params)
         resp.raise_for_status()
         return resp
+    
+
+    def getBookByISBN(self, isbn: ISBN13) -> httpx.Response:
+
+        if not isbn:
+            raise OLClientError("Unable to build open lirbary url -> no isbn")
+        
+        path = f'{self._ISBN}/{isbn.isbn}.json'
+            
+        return self._get(path=path)
+    
+    def getBookByOLID(self, olid: OLID, editions: bool = False) -> httpx.Response:
+        
+        if not olid:
+            raise OLClientError("Unable to build open lirbary url -> no olid")
+        
+        path = f'{self._WORKS}/{olid.olid}{'/editions' if editions else ''}.json'
+
+        return self._get(path=path)
+    
+    def getCoverByISBN(self, book: ISBN13, size: coverSize = coverSize(size='L')) -> httpx.Response:
+
+        if not book:
+            raise OLClientError("Unable to build open library url -> no isbn")
+        
+        path = f'{self._ISBN}/b/{book.isbn}-{size.size}.jpg'
+        
+        return self._get(path=path)
+    
+    def getAuthor(self, author: OLID):
+        
+        if not author:
+            raise OLClientError("Unable to build open library url -> no author")
+        
+        path = f'{self._AUTHORS}/{author.olid}.json'
+
+        return self._get(path=path)
+    
+    def searchAuthor(self, q: str):
+
+        if not q:
+            raise OLClientError("Unable to build open library url -> no author")
+        
+        path = f'{self._SEARCH}/authors.json'
+
+        params = {
+            'q': q
+        }
+
+        return self._get(path=path, params=params)
+    
+    
+    def getWorksByAuthor(self, author: OLID, limit: int = 100, offset: int = 0):
+        
+        if not author:
+            raise OLClientError("Unable to build open library url -> no author")
+        
+        path = f'{self._AUTHORS}/{author.olid}/{self._WORKS}.json'
+
+        params = {
+            'limit': limit,
+            'offset': offset
+        }
+
+        return self._get(path=path, params=params)
+    
+    def search(self, query: OLSearch):
+        path = f'/{self._SEARCH}'
+        params = {}
+
+        if query.q:
+            params.update({'q': query.q.to_solr()})
+        
+        if query.lang:
+            params.update({'lang': query.lang})
+        
+        if query.sort:
+            params.update({'sort': query.sort})
+        
+        if query.fields:
+            params.update({'fields': query.fields})
+
+        return self._get(path=path, params=params)
+
     
     
         
