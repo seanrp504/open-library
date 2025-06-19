@@ -5,7 +5,7 @@ from pydantic_extra_types.isbn import ISBN
 from typing import Optional
 import re
 
-OLID_PATTERN = re.compile(r'^OL\d+[MW]$')
+OLID_PATTERN = re.compile(r'^OL\d+[MWA]$')
 CLEAN_PATTERN = re.compile(r'[\s-]')
 LCCN_PATTERN_A = re.compile(r'^[a-z]{2}(98|99|[0-8][0-9])\d{6}[\da-z]?}$')
 LCCN_PATTERN_B = re.compile(r'^[a-z]{2}(20|[0-9][0-9])\d{6}$')
