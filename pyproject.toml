@@ -11,10 +11,23 @@ requires-python = ">=3.11"
 dependencies = [
     "pydantic (>=2.11.7,<3.0.0)",
     "pydantic-extra-types (>=2.10.5,<3.0.0)",
-    "httpx[http2] (>=0.28.1,<0.29.0)"
+    "httpx[http2] (>=0.28.1,<0.29.0)",
+    "pytest (>=8.4.1,<9.0.0)",
+    "textblob (>=0.19.0,<0.20.0)"
 ]
-
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "open-library"
+version = "0.1.0"
+
+[[tool.poetry.packages]]
+include = "openLibrary"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.1"
+faker = "^37.4.0"
+
