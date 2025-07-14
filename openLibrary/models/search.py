@@ -6,48 +6,16 @@ from pydantic import (
     PastDate,
     FutureDate
 )
-from openLibrary.models.books import ISBN13
+
 from pydantic_extra_types.language_code import LanguageAlpha2
+from pydantic_extra_types.isbn import ISBN
 from typing import Optional, List
 from openLibrary.common.exceptions import OLValidationError
+from openLibrary.constants import OL_SORT
 from collections.abc import Iterable
 import re
 
-OL_SORT = {
-    'editions',
-    'old'
-    'new'
-    'rating'
-    'rating asc'
-    'rating desc',
-    'readinglog'
-    'want_to_read'
-    'currently_reading'
-    'already_read'
-    'title'
-    'scans'
-    # Classifications
-    'lcc_sort'
-    'lcc_sort asc'
-    'lcc_sort desc'
-    'ddc_sort'
-    'ddc_sort asc'
-    'ddc_sort desc'
-    # Ebook access
-    'ebook_access'
-    'ebook_access asc'
-    'ebook_access desc'
-    # Key
-    'key'
-    'key asc'
-    'key desc'
-    # Random
-    'random',
-    'random asc'
-    'random desc'
-    'random.hourly'
-    'random.daily'
-}
+
 
 DEWEY_SEARCH_PATTERN = re.compile(r'^\d{1,3}\*?$')
 
@@ -85,16 +53,16 @@ class LCC(BaseModel):
     None
 
 class OLQuery(BaseModel):
-    title: Optional[str] = None
-    subtitle: Optional[str] = None
-    authors: Optional[list[str]] = None
+    title: str | None = None
+    subtitle: str | None = None
+    authors: list[str]| None = None
     subject: Optional[list[str]] = None
     place: Optional[list[str]] = None
     person: Optional[list[str]] = None
     publisher: Optional[list[str]] = None
     first_publish_year: Optional[SupportsRange] 
     ddc: Optional[DDC] = None
-    isbn: Optional[ISBN13] = None
+    isbn: Optional[ISBN] = None
     lcc: Optional[str] = None
 
     @model_validator(mode="after")
@@ -108,14 +76,15 @@ class OLQuery(BaseModel):
     def time_range(self):
         key = "first_publish_year"
         r = {}
-        if self.publish_start:
-            r.update({key: f"[{self.publish_start} TO *]"})
-    
-        if self.publish_start:
-            r.update({key: f"[* TO {self.publish_end}]"})
+
+        if self.first_publish_year.start and self.first_publish_year.end:
+            r.update({key: f"[{self.first_publish_year.start} TO {self.first_publish_year.end}]"})
         
-        if self.publish_start and self.publish_end:
-            r.update({key: f"[{self.publish_start} TO {self.publish_end}]"})
+        elif self.first_publish_year.start:
+            r.update({key: f"[{self.first_publish_year.start} TO *]"})
+    
+        elif self.first_publish_year.end:
+            r.update({key: f"[* TO {self.first_publish_year.end}]"})
         
         return r
 

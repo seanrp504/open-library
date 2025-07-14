@@ -1,0 +1,184 @@
+{
+    "key": "/works/OL3140822W",
+    "title": "To Kill a Mockingbird",
+    "first_publish_date": "1969",
+    "authors": [
+        {
+            "author": {
+                "key": "/authors/OL498120A"
+            },
+            "type": {
+                "key": "/type/author_role"
+            }
+        }
+    ],
+    "type": {
+        "key": "/type/work"
+    },
+    "description": "One of the best-loved stories of all time, To Kill a Mockingbird has been translated into more than 40 languages, sold more than 30 million copies worldwide, served as the basis for an enormously popular motion picture, and voted one of the best novels of the 20th century by librarians across the United States. A gripping, heart-wrenching, and wholly remarkable tale of coming-of-age in a South poisoned by virulent prejudice, it views a world of great beauty and savage inequities through the eyes of a young girl, as her father -- a crusading local lawyer -- risks everything to defend a black man unjustly accused of a terrible crime.\r\n\r\nLawyer Atticus Finch defends Tom Robinson -- a black man charged with the rape of a white girl. Writing through the young eyes of Finch's children Scout and Jem, Harper Lee explores with rich humor and unswerving honesty the irrationality of adult attitudes toward race and class in small-town Alabama during the mid-1930s Depression years. The conscience of a town steeped in prejudice, violence, and hypocrisy is pricked by the stamina and quiet heroism of one man's struggle for justice. But the weight of history will only tolerate so much.\r\n\r\n\r\n----------\r\nAlso contained in:\r\n\r\n - [Best Sellers from Reader's Digest Condensed Books](https://openlibrary.org/works/OL16035425W)",
+    "links": [
+        {
+            "title": "VIAF ID: 175855105 (Work)",
+            "url": "http://viaf.org/viaf/175855105",
+            "type": {
+                "key": "/type/link"
+            }
+        },
+        {
+            "title": "The New York Times: A Classic Turns 50, and Parties Are Planned",
+            "url": "http://www.nytimes.com/2010/05/25/books/25mock.html",
+            "type": {
+                "key": "/type/link"
+            }
+        },
+        {
+            "title": "To Kill a Mockingbird - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/To_Kill_a_Mockingbird",
+            "type": {
+                "key": "/type/link"
+            }
+        },
+        {
+            "title": "To Kill a Mockingbird | Summary, Characters, & Facts | Britannica.com",
+            "url": "https://www.britannica.com/topic/To-Kill-a-Mockingbird",
+            "type": {
+                "key": "/type/link"
+            }
+        },
+        {
+            "title": "SparkNotes: To Kill a Mockingbird",
+            "url": "https://www.sparknotes.com/lit/mocking/",
+            "type": {
+                "key": "/type/link"
+            }
+        },
+        {
+            "title": "New York Times review",
+            "url": "http://movies.nytimes.com/2011/05/13/movies/hey-boo-harper-lee-and-to-kill-a-mockingbird.html",
+            "type": {
+                "key": "/type/link"
+            }
+        }
+    ],
+    "covers": [
+        12606502,
+        -1,
+        10630435,
+        9350349,
+        13008583,
+        13526713
+    ],
+    "subject_places": [
+        "Southern States",
+        "Maycomb",
+        "Alabama",
+        "Deep South"
+    ],
+    "subject_people": [
+        "Jean Louise Finch",
+        "Jeremy Finch",
+        "Dill",
+        "Arthur Radley",
+        "Judge Taylor",
+        "Atticus Finch",
+        "Tom Robinson",
+        "Mayella Ewell",
+        "Bob Ewell",
+        "Sheriff Tate",
+        "Atticus Finch (Fictitious character)",
+        "Scout Finch (Fictitious character)"
+    ],
+    "excerpts": [
+        {
+            "excerpt": "When he was nearly thirteen, my brother Jem got his arm badly broken at the elbow.",
+            "comment": "first sentence",
+            "author": {
+                "key": "/people/seabelis"
+            }
+        }
+    ],
+    "subjects": [
+        "fiction",
+        "fiction classics",
+        "contemporary fiction",
+        "racial segregation",
+        "mob mentality",
+        "Southern Gothic",
+        "southern life",
+        "racial injustice",
+        "class",
+        "courage",
+        "compassion",
+        "gender roles",
+        "laws",
+        "loss of innocence",
+        "rape trials",
+        "domestic fiction",
+        "legal stories",
+        "Bildungsromans",
+        "Race relations",
+        "Lawyers",
+        "Girls",
+        "Prejudices",
+        "Fathers and daughters",
+        "Trials (Rape)",
+        "Great Depression",
+        "African Americans",
+        "Father-daughter relationship,",
+        "Toleranz",
+        "Kind",
+        "American fiction (fictional works by one author)",
+        "Fiction, coming of age",
+        "Fiction, family life",
+        "Fiction, legal",
+        "Fathers and daughters, fiction",
+        "Southern states, fiction",
+        "Lawyers, fiction",
+        "African americans, fiction",
+        "Social life and customs",
+        "Manners and customs",
+        "Padres e hijas",
+        "Novela",
+        "Relaciones raciales",
+        "Procesos por violaci\u00f3n",
+        "Spanish language materials",
+        "Father-daughter relationship",
+        "New York Times reviewed",
+        "American literature",
+        "Fiction, family life, general",
+        "Large type books",
+        "Muchachas",
+        "Ficci\u00f3n",
+        "Relations raciales",
+        "Romans, nouvelles",
+        "Proc\u00e8s (Viol)",
+        "Filles",
+        "Classics",
+        "Literary",
+        "American fiction",
+        "Estados del Sur (Estados Unidos)",
+        "Juvenile fiction",
+        "Families",
+        "Fiction, general",
+        "Long Now Manual for Civilization",
+        "Fictional Works [Publication Type]",
+        "Rape"
+    ],
+    "subject_times": [
+        "1933-35"
+    ],
+    "first_sentence": {
+        "type": "/type/text",
+        "value": "When he was nearly thirteen, my brother Jem got his arm badly broken at the elbow."
+    },
+    "latest_revision": 6,
+    "revision": 6,
+    "created": {
+        "type": "/type/datetime",
+        "value": "2009-12-10T02:21:18.477125"
+    },
+    "last_modified": {
+        "type": "/type/datetime",
+        "value": "2025-05-19T10:32:00.378594"
+    }
+}

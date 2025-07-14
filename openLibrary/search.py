@@ -1,15 +1,23 @@
 import httpx
-from openLibrary.models.books import (
+from openLibrary.models.id import (
     ISBN13, 
     coverSize,
     LCCN, 
     OLID
-    )
+)
 from openLibrary.models.search import OLSearch
 from openLibrary.common.exceptions import OLClientError
 from typing import Optional
-from urllib.parse import urlencode
-
+from urllib.parse import urlencode 
+from openLibrary.constants import (
+    _ISBN,
+    _AUTHORS,
+    _COVERS,
+    _LCCN,
+    _OLID,
+    _SEARCH,
+    _WORKS
+)
 
 
 class openLibrary:
@@ -22,18 +30,7 @@ class openLibrary:
     some models accept multiple types of fields but only one value
     """
 
-    BASE_DOMAIN = 'openlibrary.org'
-    _ISBN = 'isbn'
-    _OLID = 'olid'
-    _LCCN = 'lccn'
-    _WORKS = 'works'
-    _COVERS = 'covers'
-    _AUTHORS = 'authors'
-    _SEARCH = 'search.json'
-
-    TIMEOUT_CONFIG = httpx.Timeout(10.0, connect=4.0, read=6.0)
-
-    def __init__(self, timeout: Optional[httpx.Timeout] = None):
+    def __init__(self, timeout: Optional[httpx.Timeout] = httpx.Timeout(10.0, connect=4.0, read=6.0)):
         if timeout:
             self.TIMEOUT_CONFIG = timeout
 
@@ -48,7 +45,7 @@ class openLibrary:
         return resp
     
 
-    def getBookByISBN(self, isbn: ISBN13) -> httpx.Response:
+    def _getBookByISBN(self, isbn: ISBN13) -> httpx.Response:
 
         if not isbn:
             raise OLClientError("Unable to build open lirbary url -> no isbn")
@@ -57,16 +54,17 @@ class openLibrary:
             
         return self._get(path=path)
     
-    def getBookByOLID(self, olid: OLID, editions: bool = False) -> httpx.Response:
+    def _getBookByOLID(self, olid: OLID, editions: bool = False, ratings: bool = False) -> httpx.Response:
         
         if not olid:
             raise OLClientError("Unable to build open lirbary url -> no olid")
         
-        path = f'{self._WORKS}/{olid.olid}{'/editions' if editions else ''}.json'
+        path = f'{self._WORKS}/{olid.olid}.json'
 
         return self._get(path=path)
     
-    def getCoverByISBN(self, book: ISBN13, size: coverSize = coverSize(size='L')) -> httpx.Response:
+    
+    def _getCoverByISBN(self, book: ISBN13, size: coverSize = coverSize(size='L')) -> httpx.Response:
 
         if not book:
             raise OLClientError("Unable to build open library url -> no isbn")
@@ -75,8 +73,10 @@ class openLibrary:
         
         return self._get(path=path)
     
-    def getAuthor(self, author: OLID):
-        
+    def _getAuthor(self, author: OLID):
+        '''
+        get info about an author
+        '''
         if not author:
             raise OLClientError("Unable to build open library url -> no author")
         
@@ -84,7 +84,11 @@ class openLibrary:
 
         return self._get(path=path)
     
-    def searchAuthor(self, q: str):
+    def _searchAuthor(self, q: str):
+
+        '''
+        search for an author by name
+        '''
 
         if not q:
             raise OLClientError("Unable to build open library url -> no author")
@@ -98,7 +102,11 @@ class openLibrary:
         return self._get(path=path, params=params)
     
     
-    def getWorksByAuthor(self, author: OLID, limit: int = 100, offset: int = 0):
+    def _getWorksByAuthor(self, author: OLID, limit: int = 100, offset: int = 0):
+
+        '''
+        get works by an other, by searching their open library id
+        '''
         
         if not author:
             raise OLClientError("Unable to build open library url -> no author")
@@ -112,12 +120,21 @@ class openLibrary:
 
         return self._get(path=path, params=params)
     
+    def book():
+        None
+    
+    def author():
+        None
+    
+    def cover():
+        None
+    
     def search(self, query: OLSearch):
         path = f'/{self._SEARCH}'
         params = {}
 
         if query.q:
-            params.update({'q': query.q.to_solr()})
+            params.update({'q': query.q.solr})
         
         if query.lang:
             params.update({'lang': query.lang})

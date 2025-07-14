@@ -4,18 +4,10 @@ from pydantic import (
     BaseModel,
     model_validator,
     field_validator,
-    computed_field,
     ValidationError,
-    PositiveFloat,
-    UUID4
+    PositiveFloat
 )
-from pydantic_extra_types.isbn import ISBN
-from typing import Optional, Any, List
-from datetime import datetime
-from uuid import (
-    uuid4 as v4,
-    
-)
+from typing import Any
 import re
 
 
@@ -24,28 +16,6 @@ CLEAN_PATTERN = re.compile( r'[\s-]' )
 LCCN_PATTERN = re.compile( r'^([n]{1}[bro]{1})?([s]{1}[hjp]{1})?(\d{2}|\d{4})?\d{6}(AK|AM|ACN|AK|F|HE|M|MAP|MN|MP|NE|PP|R)?$' )
 DDS_PATTER = re.compile( r'^\d{3}(\.\d{1,10})?$' )
 
-
-class ISBN13(BaseModel):
-    ''' 
-    Model to normalize all ISBNs to ISBN13 
-    must pass pydantic-extra-types ISBN validation
-
-    Args:
-        isbn (int | str): an isbn 10 or 13 number 
-
-    Return:
-        ISBN13: An ISBN13 object
-    
-    Raises: 
-        ValidationError: If ISBN is invalid
-    
-    '''
-    isbn: ISBN
-
-    @field_validator("isbn", mode="before")
-    @classmethod
-    def convert_to_isbn13(cls, isbn: ISBN):
-        return isbn.convert_isbn10_to_isbn13()
     
 
 class OLID(BaseModel):
@@ -53,8 +23,8 @@ class OLID(BaseModel):
     Model for Open Library IDs 
 
     Args:
-        olid (str): an open library id \n
-            normalized to uppercase \n
+        olid (str): an open library id 
+            normalized to uppercase 
             validated by -> r'OL\d+(WMA)'
     
     Returns: 
@@ -201,37 +171,3 @@ class coverSize(BaseModel):
         return cls(size="L")
 
 
-class Author(BaseModel):
-    prefix: Optional[str] 
-    first: Optional[str] 
-    middle: Optional[str]
-    last: Optional[str]
-    suffix: Optional[str]
-
-    @field_validator("prefix", "first", "middle", "last", "suffix", mode="before")
-    @classmethod
-    def normalize(cls, v):
-        if v:
-            return str(v).strip().capitalize()
-    
-    @computed_field
-    @property
-    def full(self) -> str:
-        self.model_dump
-        parts = [self.prefix, self.first, self.middle, self.last, self.suffix]
-        return " ".join(p if p else '' for p in parts if parts)
-
-
-class book(BaseModel):
-    id: UUID4 = v4()
-    isbn13: Optional[ISBN13] = None
-    olid: Optional[OLID] = None
-    lccn: Optional[LCCN] = None
-    dewey: Optional[DeweyDecimal] = None
-    author: Author
-    title: str
-    description: Optional[str] = None
-    pub_date: datetime | str = None
-    publisher: str = None
-    genre: str | List[str]
-    type: str | List[str] = None
