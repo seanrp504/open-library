@@ -1,0 +1,215 @@
+{
+    "description": "Margaret Mitchell's monumental epic of the South won a Pulitzer Prize, gave rise to the most popular motion picture of our time, and inspired a sequel that became the fastest selling novel of the century. It is one of the most popular books ever written: more than 28 million copies of the book have been sold in more than 37 countries. Today, more than 60 years after its initial publication, its achievements are unparalleled, and it remains the most revered American saga and the most beloved work by an American writer...",
+    "links": [
+        {
+            "title": "Gone with the Wind (novel)",
+            "url": "https://en.wikipedia.org/wiki/Gone_with_the_Wind_(novel)",
+            "type": {
+                "key": "/type/link"
+            }
+        },
+        {
+            "title": "Books to give you hope: Gone With the Wind by Margaret Mitchell",
+            "url": "https://www.theguardian.com/books/booksblog/2016/aug/31/books-to-give-you-hope-gone-with-the-wind-by-margaret-mitchell",
+            "type": {
+                "key": "/type/link"
+            }
+        },
+        {
+            "title": "Gone with the Wind | novel by Mitchell | Britannica.com",
+            "url": "https://www.britannica.com/topic/Gone-with-the-Wind-novel",
+            "type": {
+                "key": "/type/link"
+            }
+        }
+    ],
+    "title": "Gone With the Wind",
+    "covers": [
+        14817133,
+        8296480,
+        8732448,
+        10242572,
+        10442995,
+        3079671,
+        11339483,
+        10713185,
+        11153306,
+        13112549,
+        13516993
+    ],
+    "first_sentence": {
+        "type": "/type/text",
+        "value": "SCARLETT O'HARA was not beautiful, but men seldom realized it when caught by her charm as the Tarleton twins were."
+    },
+    "subject_places": [
+        "Estados Unidos",
+        "Georgia",
+        "United States",
+        "Clayton County",
+        "Atlanta",
+        "Tara",
+        "USA"
+    ],
+    "excerpts": [
+        {
+            "excerpt": "SCARLETT O'HARA was not beautiful, but men seldom realized it when caught by her charm as the Tarleton twins were."
+        }
+    ],
+    "first_publish_date": "August 1992",
+    "subject_people": [
+        "Scarlett O'Hara",
+        "Rhett Butler",
+        "George Ashley Wilkes",
+        "Melanie Wilkes",
+        "Ellen O'Hara",
+        "Gerald O'Hara",
+        "Susan Elinor O'Hara",
+        "Caroline Irene O'Hara",
+        "Charles Hamilton",
+        "Wade Hampton Hamilton",
+        "Frank Kennedy",
+        "Ella Lorena Kennedy",
+        "Eugenie Victoria Butler",
+        "Mammy",
+        "Pork",
+        "Dilcey",
+        "Prissy",
+        "Jonas Wilkerson",
+        "Big Sam",
+        "Will Benteen",
+        "India Wilkes",
+        "Honey Wilkes",
+        "John Wilkes",
+        "Boyd",
+        "Tarleton",
+        "Tom Tarleton",
+        "Brent Tarleton",
+        "Stuart Tarleton",
+        "Hetty Tarleton",
+        "Camilla Tarleton",
+        "Beatrice Tarleton",
+        "Raiford Calvert",
+        "Cade  Calvert",
+        "Cathleen Calvert",
+        "Joe Fontaine",
+        "Tony Fontaine",
+        "Alex Fontaine",
+        "Sally Fontaine",
+        "Grandma Fontaine",
+        "Emmie Slattery",
+        "Pittypat Hamilton",
+        "Henry Hamilton",
+        "Uncle Peter",
+        "Beau Wilkes",
+        "Archie",
+        "Dr. Meade",
+        "Mrs. Meade",
+        "Dolly Merriwether",
+        "Grandpa Merriwether",
+        "Maybelle Merriwether",
+        "Ren\u00e9 Picard",
+        "Belle Watling",
+        "Pierre Robillard",
+        "Solange Robillard",
+        "Eulalie Robillard",
+        "Pauline Robillard",
+        "Philippe Robillard"
+    ],
+    "location": "/works/OL267933W",
+    "key": "/works/OL267933W",
+    "authors": [
+        {
+            "author": {
+                "key": "/authors/OL151749A"
+            },
+            "type": {
+                "key": "/type/author_role"
+            }
+        }
+    ],
+    "subject_times": [
+        "1861-1865",
+        "19th century",
+        "American Civil War",
+        "Reconstruction Era",
+        "Civil War, 1861-1865",
+        "20th century"
+    ],
+    "type": {
+        "key": "/type/work"
+    },
+    "subjects": [
+        "survival",
+        "slavery",
+        "Bildungsroman",
+        "open_syllabus_project",
+        "history",
+        "historical fiction",
+        "war stories",
+        "United States Civil War",
+        "Women",
+        "Open Library Staff Picks",
+        "Pulitzer Prize Winner",
+        "Fiction",
+        "Historia",
+        "Novela",
+        "award:pulitzer_prize=fiction",
+        "award:pulitzer_prize=1937",
+        "Plantation life",
+        "United States -- History -- Civil War, 1861-1865 -- Fiction.",
+        "American Civil War (1861-1865) fast (OCoLC)fst01351658",
+        "Historical",
+        "Reading Level-Grade 11",
+        "Reading Level-Grade 12",
+        "Drama",
+        "Georgia, fiction",
+        "Fiction, historical",
+        "Fiction, war & military",
+        "United states, history, civil war, 1861-1865, fiction",
+        "O'hara, scarlett (fictitious character), fiction",
+        "Sezessionskrieg",
+        "Familie",
+        "S\u00fcdstaaten",
+        "Fiction, historical, general",
+        "Large type books",
+        "Scarlett O'Hara (Fictitious character)",
+        "O'Hara, Scarlett (Fictitious character) -- Fiction",
+        "O'Hara, Scarlett (Fictitious character)",
+        "Women -- Georgia -- Fiction",
+        "Plantations -- Georgia -- History -- 19th century -- Fiction",
+        "Plantations -- Ge\u0301orgie (E\u0301tat) -- Histoire -- 19e sie\u0300cle -- Romans, nouvelles, etc",
+        "Plantations",
+        "Georgia -- History -- Civil War, 1861-1865 -- Fiction",
+        "Ge\u0301orgie (E\u0301tat) -- Histoire -- 1861-1865 (Guerre de Se\u0301cession) -- Romans, nouvelles, etc",
+        "Georgia",
+        "Romance fiction",
+        "English fiction",
+        "Translations into Japanese",
+        "Slave trade",
+        "African Continental Ancestry Group",
+        "Economics",
+        "Economic conditions",
+        "Powie\u015bci",
+        "Man-woman relationships",
+        "American fiction",
+        "Histoire",
+        "Romans, nouvelles",
+        "Vie dans les plantations",
+        "Relations entre hommes et femmes",
+        "Roman am\u00e9ricain",
+        "Manuskript"
+    ],
+    "lc_classifications": [
+        "PS3525.I972 G673"
+    ],
+    "latest_revision": 91,
+    "revision": 91,
+    "created": {
+        "type": "/type/datetime",
+        "value": "2009-10-24T18:37:28.105639"
+    },
+    "last_modified": {
+        "type": "/type/datetime",
+        "value": "2025-05-02T13:07:22.019252"
+    }
+}

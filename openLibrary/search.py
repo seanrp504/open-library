@@ -1,14 +1,16 @@
 import httpx
+from typing import Optional
+from urllib.parse import urlencode 
+from pydantic_extra_types.isbn import ISBN
+
 from openLibrary.models.id import (
-    ISBN13, 
     coverSize,
     LCCN, 
     OLID
 )
 from openLibrary.models.search import OLSearch
 from openLibrary.common.exceptions import OLClientError
-from typing import Optional
-from urllib.parse import urlencode 
+
 from openLibrary.constants import (
     _ISBN,
     _AUTHORS,
@@ -45,12 +47,12 @@ class openLibrary:
         return resp
     
 
-    def _getBookByISBN(self, isbn: ISBN13) -> httpx.Response:
+    def _getBookByISBN(self, isbn: ISBN) -> httpx.Response:
 
         if not isbn:
             raise OLClientError("Unable to build open lirbary url -> no isbn")
         
-        path = f'{self._ISBN}/{isbn.isbn}.json'
+        path = f'{_ISBN}/{isbn}.json'
             
         return self._get(path=path)
     
@@ -59,17 +61,17 @@ class openLibrary:
         if not olid:
             raise OLClientError("Unable to build open lirbary url -> no olid")
         
-        path = f'{self._WORKS}/{olid.olid}.json'
+        path = f'{_WORKS}/{olid.olid}.json'
 
         return self._get(path=path)
     
     
-    def _getCoverByISBN(self, book: ISBN13, size: coverSize = coverSize(size='L')) -> httpx.Response:
+    def _getCoverByISBN(self, book: ISBN, size: coverSize = coverSize(size='L')) -> httpx.Response:
 
         if not book:
             raise OLClientError("Unable to build open library url -> no isbn")
         
-        path = f'{self._ISBN}/b/{book.isbn}-{size.size}.jpg'
+        path = f'{_ISBN}/b/{book}-{size.size}.jpg'
         
         return self._get(path=path)
     
@@ -80,7 +82,7 @@ class openLibrary:
         if not author:
             raise OLClientError("Unable to build open library url -> no author")
         
-        path = f'{self._AUTHORS}/{author.olid}.json'
+        path = f'{_AUTHORS}/{author.olid}.json'
 
         return self._get(path=path)
     
@@ -93,7 +95,7 @@ class openLibrary:
         if not q:
             raise OLClientError("Unable to build open library url -> no author")
         
-        path = f'{self._SEARCH}/authors.json'
+        path = f'{_SEARCH}/authors.json'
 
         params = {
             'q': q
@@ -111,7 +113,7 @@ class openLibrary:
         if not author:
             raise OLClientError("Unable to build open library url -> no author")
         
-        path = f'{self._AUTHORS}/{author.olid}/{self._WORKS}.json'
+        path = f'{_AUTHORS}/{author.olid}/{_WORKS}.json'
 
         params = {
             'limit': limit,
@@ -130,7 +132,7 @@ class openLibrary:
         None
     
     def search(self, query: OLSearch):
-        path = f'/{self._SEARCH}'
+        path = f'/{_SEARCH}'
         params = {}
 
         if query.q:

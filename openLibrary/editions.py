@@ -7,7 +7,7 @@ from openLibrary.models.id import (
     OLID
 )
 from openLibrary.common.exceptions import OLClientError
-from openLibrary.common.client import OLBase
+from openLibrary.common.base import OLBase
 from openLibrary.constants import (
     _WORKS
 )
@@ -58,8 +58,11 @@ class Editions(BaseModel, OLBase):
     @classmethod
     def get_editions(cls, olid: OLID, offset = 0, limit = 50) -> list[Self]:
 
+        if not olid.is_work():
+            raise OLClientError("not a work id")
+
         path = f"{_WORKS}/{olid.olid}/editions.json"
-        resp = cls._get(path=path, params={"offset": offset, "limit": limit}).json()
+        resp = cls.__get(path=path, params={"offset": offset, "limit": limit}).json()
 
         return [cls(**e) for e in resp['entries']]
 

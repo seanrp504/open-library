@@ -1,0 +1,59 @@
+{
+    "photos": [
+        6389646,
+        6339310,
+        14360759
+    ],
+    "alternate_names": [
+        "Nelle Harper Lee",
+        "H. Lee",
+        "\u0425\u0430\u0440\u043f\u0435\u0440 \u041b\u0438",
+        "\u0425. \u041b\u0438",
+        "Harper Lee",
+        "Harper LEE"
+    ],
+    "personal_name": "Lee, Harper.",
+    "remote_ids": {
+        "viaf": "12431460",
+        "wikidata": "Q182658",
+        "isni": "0000000080918006"
+    },
+    "key": "/authors/OL498120A",
+    "source_records": [
+        "amazon:0063035995",
+        "amazon:850301372X",
+        "amazon:2253068780",
+        "amazon:9606204065",
+        "amazon:5170585306",
+        "bwb:9781473556812"
+    ],
+    "name": "Harper Lee",
+    "birth_date": "28 April 1926",
+    "links": [
+        {
+            "url": "http://www.nytimes.com/2010/05/25/books/25mock.html",
+            "title": "The New York Times: A Classic Turns 50, and Parties Are Planned",
+            "type": {
+                "key": "/type/link"
+            }
+        }
+    ],
+    "type": {
+        "key": "/type/author"
+    },
+    "bio": {
+        "type": "/type/text",
+        "value": "Nelle Harper Lee was an American novelist. She wrote the 1960 novel To Kill a Mockingbird that won the 1961 Pulitzer Prize and became a classic of modern American literature. Lee received numerous accolades and honorary degrees, including the Presidential Medal of Freedom in 2007 which was awarded for her contribution to literature. She assisted her close friend Truman Capote in his research for the book In Cold Blood (1966). Capote was the basis for the character Dill Harris in To Kill a Mockingbird."
+    },
+    "death_date": "19 February 2016",
+    "latest_revision": 17,
+    "revision": 17,
+    "created": {
+        "type": "/type/datetime",
+        "value": "2008-04-01T03:28:50.625462"
+    },
+    "last_modified": {
+        "type": "/type/datetime",
+        "value": "2024-04-25T18:21:06.820930"
+    }
+}

@@ -1,0 +1,90 @@
+{
+    "publishers": [
+        "Harper Perennial Modern Classics"
+    ],
+    "number_of_pages": 323,
+    "description": {
+        "type": "/type/text",
+        "value": "One of the best-loved stories of all time, To Kill a Mockingbird has been translated into more than forty languages, sold more than thirty million copies worldwide, served as the basis of an enormously popular motion picture, and was voted one of the best novels of the twentieth century by librarians across the country. A gripping, heart wrenching, and wholly remarkable tale of coming-of-age in a South poisoned by viruletn prejudice, it views a world of great beauty and savage inequities through the eyes of a youn girl, as her father--a crusading local lawyer--risks everything to defend a black man unjustly accused of a terrible crime.\r\n(front flap)"
+    },
+    "weight": "13.6 ounces",
+    "isbn_10": [
+        "0061120081"
+    ],
+    "covers": [
+        14351032
+    ],
+    "physical_format": "Paperback",
+    "lc_classifications": [
+        "PS3562 .E353 T6"
+    ],
+    "key": "/books/OL9242848M",
+    "authors": [
+        {
+            "key": "/authors/OL498120A"
+        }
+    ],
+    "ocaid": "tokillmockingbir00harp",
+    "publish_places": [
+        "New York, USA"
+    ],
+    "languages": [
+        {
+            "key": "/languages/eng"
+        }
+    ],
+    "source_records": [
+        "bwb:9780061120084",
+        "amazon:0061120081",
+        "idb:9780061120084"
+    ],
+    "title": "To Kill a Mockingbird",
+    "notes": {
+        "type": "/type/text",
+        "value": "USA/CAN"
+    },
+    "identifiers": {
+        "paperback_swap": [
+            "0061120081"
+        ],
+        "goodreads": [
+            "44299343"
+        ],
+        "librarything": [
+            "3092"
+        ]
+    },
+    "isbn_13": [
+        "9780061120084"
+    ],
+    "edition_name": "First Harper Perennial Modern Classics Edition (3)",
+    "subjects": [
+        "Lee, Harper - Prose & Criticism",
+        "Fiction",
+        "Literature - Classics / Criticism",
+        "Literature: Classics",
+        "Classics",
+        "Fiction / Literary"
+    ],
+    "publish_date": "2006",
+    "copyright_date": "1988",
+    "works": [
+        {
+            "key": "/works/OL3140822W"
+        }
+    ],
+    "type": {
+        "key": "/type/edition"
+    },
+    "physical_dimensions": "8.1 x 5.5 x 1.1 inches",
+    "latest_revision": 20,
+    "revision": 20,
+    "created": {
+        "type": "/type/datetime",
+        "value": "2008-04-30T09:38:13.731961"
+    },
+    "last_modified": {
+        "type": "/type/datetime",
+        "value": "2024-04-25T18:28:49.362479"
+    }
+}

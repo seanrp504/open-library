@@ -1,0 +1,1616 @@
+{
+    "links": {
+        "self": "/authors/OL498120A/works.json",
+        "author": "/authors/OL498120A"
+    },
+    "size": 36,
+    "entries": [
+        {
+            "subjects": [
+                "Condensed books",
+                "American fiction",
+                "Fiction",
+                "racial segregation",
+                "mob mentality",
+                "Southern Gothic",
+                "southern life",
+                "racial injustice",
+                "class",
+                "courage",
+                "compassion",
+                "gender roles",
+                "laws",
+                "loss of innocence",
+                "rape trials",
+                "domestic fiction",
+                "legal stories",
+                "Bildungsromans",
+                "Race relations",
+                "Lawyers",
+                "Girls",
+                "Prejudices",
+                "Fathers and daughters",
+                "Trials (Rape)",
+                "Great Depression",
+                "African Americans",
+                "Father-daughter relationship,"
+            ],
+            "key": "/works/OL15134128W",
+            "title": "Best Sellers",
+            "subject_times": [
+                "20th century",
+                "1933-35"
+            ],
+            "authors": [
+                {
+                    "author": {
+                        "key": "/authors/OL1964240A"
+                    },
+                    "type": {
+                        "key": "/type/author_role"
+                    }
+                },
+                {
+                    "author": {
+                        "key": "/authors/OL463647A"
+                    },
+                    "type": {
+                        "key": "/type/author_role"
+                    }
+                },
+                {
+                    "author": {
+                        "key": "/authors/OL342374A"
+                    },
+                    "type": {
+                        "key": "/type/author_role"
+                    }
+                },
+                {
+                    "author": {
+                        "key": "/authors/OL2622594A"
+                    },
+                    "type": {
+                        "key": "/type/author_role"
+                    }
+                },
+                {
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    },
+                    "type": {
+                        "key": "/type/author_role"
+                    }
+                },
+                {
+                    "author": {
+                        "key": "/authors/OL1070804A"
+                    },
+                    "type": {
+                        "key": "/type/author_role"
+                    }
+                },
+                {
+                    "author": {
+                        "key": "/authors/OL3235099A"
+                    },
+                    "type": {
+                        "key": "/type/author_role"
+                    }
+                },
+                {
+                    "author": {
+                        "key": "/authors/OL2465645A"
+                    },
+                    "type": {
+                        "key": "/type/author_role"
+                    }
+                }
+            ],
+            "type": {
+                "key": "/type/work"
+            },
+            "description": {
+                "type": "/type/text",
+                "value": "Contains:\r\n[To Kill a Mockingbird](https://openlibrary.org/works/OL3140834W/To_Kill_a_Mockingbird)\r\nShoes of the Fisherman\r\nSeven Days in May\r\nTo Catch an Angel"
+            },
+            "covers": [
+                9272721
+            ],
+            "subject_places": [
+                "Southern States",
+                "Maycomb",
+                "Alabama",
+                "Deep South"
+            ],
+            "subject_people": [
+                "Jean Louise Finch",
+                "Jeremy Finch",
+                "Dill",
+                "Arthur Radley",
+                "Judge Taylor",
+                "Atticus Finch",
+                "Tom Robinson",
+                "Mayella Ewell",
+                "Bob Ewell",
+                "Sheriff Tate"
+            ],
+            "latest_revision": 9,
+            "revision": 9,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2010-05-05T20:58:05.645429"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-11-24T14:37:57.275563"
+            }
+        },
+        {
+            "title": "Vai e P\u00f5e uma Sentinela",
+            "authors": [
+                {
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    },
+                    "type": {
+                        "key": "/type/author_role"
+                    }
+                }
+            ],
+            "key": "/works/OL38405468W",
+            "type": {
+                "key": "/type/work"
+            },
+            "latest_revision": 1,
+            "revision": 1,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2024-06-26T15:48:58.167372"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-06-26T15:48:58.167372"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/work"
+            },
+            "title": "Ubit peresmeshnika Na anglijskom yazyke Anglijskij yazyk knigi dlya chteniya",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                }
+            ],
+            "key": "/works/OL33777262W",
+            "covers": [
+                13799436
+            ],
+            "latest_revision": 3,
+            "revision": 3,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2023-01-14T12:32:46.616520"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:21:06.820930"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/work"
+            },
+            "title": "Matar Un Ruisenor",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                },
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL3202046A"
+                    }
+                }
+            ],
+            "covers": [
+                13116458
+            ],
+            "key": "/works/OL33070596W",
+            "latest_revision": 2,
+            "revision": 2,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2022-12-26T15:20:16.149421"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-01-19T10:49:58.662461"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/work"
+            },
+            "title": "O Sol e Para Todos - Graphic Novel",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                }
+            ],
+            "key": "/works/OL29227946W",
+            "latest_revision": 2,
+            "revision": 2,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2022-10-20T06:04:55.625463"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-01-19T10:49:58.662461"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/work"
+            },
+            "title": "otan skotonoun ta kotsyfia / \u03cc\u03c4\u03b1\u03bd \u03c3\u03ba\u03bf\u03c4\u03ce\u03bd\u03bf\u03c5\u03bd \u03c4\u03b1 \u03ba\u03bf\u03c4\u03c3\u03cd\u03c6\u03b9\u03b1",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                }
+            ],
+            "key": "/works/OL28958873W",
+            "latest_revision": 2,
+            "revision": 2,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2022-10-09T08:52:59.070569"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-01-19T10:49:58.662461"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/work"
+            },
+            "title": "Turkey's Sandtastic Beach Day",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL2763916A"
+                    }
+                },
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                }
+            ],
+            "key": "/works/OL29184928W",
+            "latest_revision": 2,
+            "revision": 2,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2022-10-19T20:42:48.777192"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-01-19T10:49:58.662461"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/work"
+            },
+            "title": "Caja Especial Harper Lee",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                },
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL12762574A"
+                    }
+                }
+            ],
+            "covers": [
+                14290074
+            ],
+            "key": "/works/OL35257239W",
+            "latest_revision": 2,
+            "revision": 2,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2023-04-21T11:59:08.947080"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-01-19T10:49:58.662461"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/work"
+            },
+            "title": "Caja Especial Harper Lee",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                },
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL12762574A"
+                    }
+                }
+            ],
+            "covers": [
+                14290075
+            ],
+            "key": "/works/OL35257240W",
+            "latest_revision": 2,
+            "revision": 2,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2023-04-21T11:59:08.957078"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-01-19T10:49:58.662461"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/work"
+            },
+            "title": "CliffsNotes on Lee's to Kill a Mockingbird",
+            "subjects": [
+                "Lee, harper, 1926-2016",
+                "American fiction, history and criticism, 20th century"
+            ],
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL10757533A"
+                    }
+                },
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                }
+            ],
+            "key": "/works/OL29055650W",
+            "latest_revision": 2,
+            "revision": 2,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2022-10-18T07:00:03.543078"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-01-19T10:49:58.662461"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/work"
+            },
+            "title": "Matar a un ruisenor",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                }
+            ],
+            "covers": [
+                13628885
+            ],
+            "key": "/works/OL34846440W",
+            "latest_revision": 2,
+            "revision": 2,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2023-03-18T20:53:26.720562"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-01-19T10:49:58.662461"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/work"
+            },
+            "title": "Caja Especial Harper Lee",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                },
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL12762574A"
+                    }
+                }
+            ],
+            "covers": [
+                14290076
+            ],
+            "key": "/works/OL35257241W",
+            "latest_revision": 2,
+            "revision": 2,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2023-04-21T11:59:08.982102"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-01-19T10:49:58.662461"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/work"
+            },
+            "title": "Caja Especial Harper Lee",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                },
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL12762574A"
+                    }
+                }
+            ],
+            "covers": [
+                14290077
+            ],
+            "key": "/works/OL35257242W",
+            "latest_revision": 2,
+            "revision": 2,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2023-04-21T11:59:09.216209"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-01-19T10:49:58.662461"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/work"
+            },
+            "title": "To Kill a Mockingbird. Interpretationshilfe.",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                },
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL603239A"
+                    }
+                }
+            ],
+            "covers": [
+                3224004
+            ],
+            "key": "/works/OL29251155W",
+            "latest_revision": 1,
+            "revision": 1,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2022-10-31T11:41:23.067590"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2022-10-31T11:41:23.067590"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/work"
+            },
+            "title": "On Lee's to Kill a Mockingbird : (CliffsNotes, 2nd Edition)",
+            "subjects": [
+                "Literature, history and criticism",
+                "Literature, collections"
+            ],
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                },
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL6831808A"
+                    }
+                }
+            ],
+            "key": "/works/OL28411735W",
+            "latest_revision": 2,
+            "revision": 2,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2022-07-19T22:32:23.746198"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2022-09-20T13:53:32.241726"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/work"
+            },
+            "title": "Turkey's Valentine Surprise",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL2763916A"
+                    }
+                },
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                }
+            ],
+            "key": "/works/OL28440159W",
+            "latest_revision": 2,
+            "revision": 2,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2022-07-20T05:09:12.995973"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2022-09-20T13:53:32.241726"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/work"
+            },
+            "title": "Countdown to Go Set a Watchman",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                }
+            ],
+            "key": "/works/OL27453506W",
+            "latest_revision": 2,
+            "revision": 2,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2022-03-01T14:01:22.426746"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2022-04-01T08:39:53.307778"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/work"
+            },
+            "title": "Go Set a Watchman Teaching Guide",
+            "subjects": [
+                "Teaching"
+            ],
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                },
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL9351373A"
+                    }
+                }
+            ],
+            "key": "/works/OL27481069W",
+            "latest_revision": 2,
+            "revision": 2,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2022-03-02T02:50:04.350863"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2022-04-01T08:39:53.307778"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/work"
+            },
+            "title": "Matar a un Ruise\u00f1or (Novela Gr\u00e1fica)",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                }
+            ],
+            "key": "/works/OL26500114W",
+            "latest_revision": 2,
+            "revision": 2,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2021-12-25T23:41:58.504833"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2022-04-01T08:39:53.307778"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/work"
+            },
+            "title": "O Sol e Para Todos",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                }
+            ],
+            "covers": [
+                12394034
+            ],
+            "key": "/works/OL26428570W",
+            "latest_revision": 2,
+            "revision": 2,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2021-12-08T10:10:38.633717"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2022-04-01T08:39:53.307778"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/work"
+            },
+            "title": "To Kill a Mockingbird SparkNotes Literature Guide",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL2964716A"
+                    }
+                },
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                }
+            ],
+            "key": "/works/OL26325372W",
+            "latest_revision": 2,
+            "revision": 2,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2021-11-02T20:25:29.039041"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2021-11-27T00:44:08.519502"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/work"
+            },
+            "title": "Tespih Agacinin G\u00f6lgesinde",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                }
+            ],
+            "covers": [
+                10849675
+            ],
+            "key": "/works/OL24328952W",
+            "latest_revision": 2,
+            "revision": 2,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2021-04-13T10:09:43.146910"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2021-11-27T00:44:08.519502"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/work"
+            },
+            "title": "The Harper Lee Collection",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                }
+            ],
+            "covers": [
+                11557111
+            ],
+            "key": "/works/OL24794253W",
+            "subjects": [
+                "American fiction (fictional works by one author)",
+                "Lawyers, fiction",
+                "Fiction, coming of age",
+                "Fathers and daughters, fiction",
+                "Southern states, fiction",
+                "Fiction, family life, general",
+                "Fiction, legal"
+            ],
+            "latest_revision": 3,
+            "revision": 3,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2021-08-05T21:37:56.616163"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2022-03-01T13:37:59.185202"
+            }
+        },
+        {
+            "title": "Design and Manufacturing of Structural Composites",
+            "key": "/works/OL20742542W",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                },
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL5255491A"
+                    }
+                }
+            ],
+            "type": {
+                "key": "/type/work"
+            },
+            "latest_revision": 2,
+            "revision": 2,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2020-05-16T23:00:30.119960"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2021-01-16T10:00:51.594230"
+            }
+        },
+        {
+            "title": "Emperor's Cool Clothes",
+            "key": "/works/OL21354433W",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                }
+            ],
+            "type": {
+                "key": "/type/work"
+            },
+            "latest_revision": 2,
+            "revision": 2,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2020-08-18T01:03:54.786063"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2021-01-16T10:00:51.594230"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/work"
+            },
+            "title": "Kushtan-i murgh-i m\u012bn\u0101",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                }
+            ],
+            "key": "/works/OL24056235W",
+            "latest_revision": 2,
+            "revision": 2,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2020-12-17T01:02:20.534161"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2021-01-16T10:00:51.594230"
+            }
+        },
+        {
+            "title": "Harper Lee Collection e-Book Bundle",
+            "subjects": [
+                "American fiction (fictional works by one author)",
+                "Fathers and daughters, fiction",
+                "Lawyers, fiction",
+                "Southern states, fiction",
+                "Fiction, coming of age",
+                "Fiction, family life",
+                "Fiction, legal",
+                "Fiction, family life, general"
+            ],
+            "key": "/works/OL21815814W",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                }
+            ],
+            "type": {
+                "key": "/type/work"
+            },
+            "latest_revision": 3,
+            "revision": 3,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2020-08-30T09:41:34.843778"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2022-03-01T14:01:25.777963"
+            }
+        },
+        {
+            "description": {
+                "type": "/type/text",
+                "value": "Maycomb, Alabama. Twenty-six-year-old Jean Louise Finch -- \"Scout\" -- returns home from New York City to visit her aging father, Atticus. Set against the backdrop of the civil rights tensions and political turmoil that were transforming the South, Jean Louise's homecoming turns bittersweet when she learns disturbing truths about her close-knit family, the town and the people dearest to her. Memories from her childhood flood back, and her values and assumptions are thrown into doubt. Featuring many of the iconic characters from To Kill a Mockingbird, Go Set a Watchman perfectly captures a young woman, and a world, in a painful yet necessary transition out of the illusions of the past -- a journey that can be guided only by one's conscience. Written in the mid-1950s, Go Set a Watchman imparts a fuller, richer understanding and appreciation of Harper Lee. Here is an unforgettable novel of wisdom, humanity, passion, humor, and effortless precision -- a profoundly affecting work of art that is both wonderfully evocative of another era and relevant to our own times. It not only confirms the enduring brilliance of To Kill a Mockingbird, but also serves as its essential companion, adding depth, context, and new meaning to an American classic. - Jacket."
+            },
+            "title": "Go Set A Watchman",
+            "covers": [
+                7383195,
+                7395890,
+                9151950,
+                -1,
+                8902064,
+                8947125,
+                10191961,
+                10615174,
+                10680013,
+                12933893,
+                13524443,
+                14289588,
+                14289589,
+                14289590,
+                14289591
+            ],
+            "subject_places": [
+                "Alabama",
+                "Estados del Sur (Estados Unidos)",
+                "Southern States"
+            ],
+            "subjects": [
+                "Adult children of aging parents",
+                "Fathers and daughters",
+                "Race relations",
+                "Nineteen fifties",
+                "Girls",
+                "Social change",
+                "Fiction",
+                "School integration",
+                "Homecoming",
+                "Father-daughter relationship",
+                "Political fiction",
+                "Roman",
+                "Historical fiction",
+                "Amerikanisches Englisch",
+                "Domestic fiction",
+                "American fiction (fictional works by one author)",
+                "Southern states, fiction",
+                "Fiction, family life",
+                "Fathers and daughters, fiction",
+                "Legal fiction",
+                "Southern States",
+                "nyt:combined-print-and-e-book-fiction=2015-08-02",
+                "New York Times bestseller",
+                "New York Times reviewed",
+                "American fiction",
+                "Fiction, family life, general",
+                "Finch, scout",
+                "Finch, atticus",
+                "Homecoming--fiction",
+                "Fathers and daughters--fiction",
+                "Nineteen fifties--fiction",
+                "Social change--fiction",
+                "Race relations--fiction",
+                "Ps3562.e353 g6 2015",
+                "813/.6",
+                "Relaciones raciales",
+                "Cambio social",
+                "Ficci\u00f3n",
+                "Padres e hijas",
+                "nyt:trade-fiction-paperback=2016-05-22"
+            ],
+            "subject_people": [
+                "Atticus Finch (Fictitious character)",
+                "Scout Finch (Fictitious character)"
+            ],
+            "key": "/works/OL17163917W",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                }
+            ],
+            "type": {
+                "key": "/type/work"
+            },
+            "links": [
+                {
+                    "url": "http://www.nytimes.com/2015/07/14/books/review/harper-lees-go-set-a-watchman.html",
+                    "title": "New York Times review",
+                    "type": {
+                        "key": "/type/link"
+                    }
+                }
+            ],
+            "latest_revision": 16,
+            "revision": 16,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2015-07-15T22:04:43.455543"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:35:23.205735"
+            }
+        },
+        {
+            "created": {
+                "type": "/type/datetime",
+                "value": "2020-07-31T14:47:15.678066"
+            },
+            "subjects": [
+                "American drama (dramatic works by one author)"
+            ],
+            "latest_revision": 1,
+            "key": "/works/OL20988122W",
+            "title": "Play of To Kill a Mockingbird",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL551898A"
+                    }
+                },
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                }
+            ],
+            "type": {
+                "key": "/type/work"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2020-07-31T14:47:15.678066"
+            },
+            "covers": [
+                274955
+            ],
+            "revision": 1
+        },
+        {
+            "created": {
+                "type": "/type/datetime",
+                "value": "2020-02-15T18:28:15.297622"
+            },
+            "latest_revision": 2,
+            "description": {
+                "type": "/type/text",
+                "value": "Contains:\r\nI Heard the Owl Call My Name\r\nMorning's at Seven\r\n[To Kill a Mockingbird](https://openlibrary.org/works/OL3140834W/To_Kill_a_Mockingbird)"
+            },
+            "key": "/works/OL20645550W",
+            "title": "Ledigs legend\u00e4res Lesevergn\u00fcgen (I Heard the Owl Call My Name / Morning's at Seven / To Kill a Mockingbird)",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                },
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL2774916A"
+                    }
+                },
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL1654884A"
+                    }
+                }
+            ],
+            "type": {
+                "key": "/type/work"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2020-02-15T18:31:50.633825"
+            },
+            "covers": [
+                3216321
+            ],
+            "revision": 2
+        },
+        {
+            "title": "Shou wang zhe",
+            "created": {
+                "type": "/type/datetime",
+                "value": "2019-07-19T15:31:22.542217"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2019-12-05T17:52:15.810206"
+            },
+            "latest_revision": 2,
+            "key": "/works/OL20034842W",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                }
+            ],
+            "type": {
+                "key": "/type/work"
+            },
+            "revision": 2
+        },
+        {
+            "subjects": [
+                "Comics & graphic novels, literary",
+                "Fiction, coming of age",
+                "Fiction, family life",
+                "Fiction, legal",
+                "Fathers and daughters, fiction",
+                "Southern states, fiction",
+                "Lawyers, fiction",
+                "African americans, fiction",
+                "Fiction, family life, general"
+            ],
+            "key": "/works/OL20168372W",
+            "title": "To Kill a Mockingbird",
+            "authors": [
+                {
+                    "author": {
+                        "key": "/authors/OL7640806A"
+                    },
+                    "type": {
+                        "key": "/type/author_role"
+                    }
+                },
+                {
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    },
+                    "type": {
+                        "key": "/type/author_role"
+                    }
+                }
+            ],
+            "type": {
+                "key": "/type/work"
+            },
+            "covers": [
+                8814495
+            ],
+            "subtitle": "A Graphic Novel",
+            "latest_revision": 6,
+            "revision": 6,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2019-10-05T16:05:37.227599"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2022-08-04T08:30:52.443809"
+            }
+        },
+        {
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2019-12-05T17:52:15.810206"
+            },
+            "latest_revision": 2,
+            "key": "/works/OL20053005W",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                }
+            ],
+            "created": {
+                "type": "/type/datetime",
+                "value": "2019-07-19T22:20:13.389439"
+            },
+            "title": "Saa, mihari o tateyo",
+            "subject_places": [
+                "Alabama",
+                "Southern States"
+            ],
+            "subjects": [
+                "Adult children of aging parents",
+                "Social life and customs",
+                "Race relations",
+                "Nineteen fifties",
+                "Social change",
+                "Fiction",
+                "Fathers and daughters",
+                "Homecoming"
+            ],
+            "subject_people": [
+                "Atticus Finch (Fictitious character)",
+                "Scout Finch (Fictitious character)"
+            ],
+            "type": {
+                "key": "/type/work"
+            },
+            "revision": 2
+        },
+        {
+            "key": "/works/OL20009425W",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                }
+            ],
+            "title": "P'asukkun",
+            "subject_places": [
+                "Alabama",
+                "Southern States"
+            ],
+            "subjects": [
+                "Adult children of aging parents",
+                "Fathers and daughters",
+                "Race relations",
+                "Nineteen fifties",
+                "Social change",
+                "Fiction",
+                "School integration",
+                "Homecoming"
+            ],
+            "subject_people": [
+                "Atticus Finch (Fictitious character)",
+                "Scout Finch (Fictitious character)"
+            ],
+            "type": {
+                "key": "/type/work"
+            },
+            "covers": [
+                13292669
+            ],
+            "latest_revision": 3,
+            "revision": 3,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2019-07-19T04:58:57.348595"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2023-02-11T04:40:00.547717"
+            }
+        },
+        {
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2019-12-05T17:52:15.810206"
+            },
+            "latest_revision": 2,
+            "key": "/works/OL20024070W",
+            "authors": [
+                {
+                    "type": {
+                        "key": "/type/author_role"
+                    },
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    }
+                }
+            ],
+            "created": {
+                "type": "/type/datetime",
+                "value": "2019-07-19T11:06:40.206869"
+            },
+            "title": "Po\u012ddi postav\u02b9 storozha",
+            "subject_places": [
+                "Alabama",
+                "Southern States"
+            ],
+            "subjects": [
+                "Adult children of aging parents",
+                "Social life and customs",
+                "Race relations",
+                "Fathers and daughters",
+                "Homecoming",
+                "Social change",
+                "Fiction"
+            ],
+            "subject_people": [
+                "Atticus Finch (Fictitious character)",
+                "Scout Finch (Fictitious character)"
+            ],
+            "type": {
+                "key": "/type/work"
+            },
+            "revision": 2
+        },
+        {
+            "key": "/works/OL3140822W",
+            "title": "To Kill a Mockingbird",
+            "first_publish_date": "1969",
+            "authors": [
+                {
+                    "author": {
+                        "key": "/authors/OL498120A"
+                    },
+                    "type": {
+                        "key": "/type/author_role"
+                    }
+                }
+            ],
+            "type": {
+                "key": "/type/work"
+            },
+            "description": "One of the best-loved stories of all time, To Kill a Mockingbird has been translated into more than 40 languages, sold more than 30 million copies worldwide, served as the basis for an enormously popular motion picture, and voted one of the best novels of the 20th century by librarians across the United States. A gripping, heart-wrenching, and wholly remarkable tale of coming-of-age in a South poisoned by virulent prejudice, it views a world of great beauty and savage inequities through the eyes of a young girl, as her father -- a crusading local lawyer -- risks everything to defend a black man unjustly accused of a terrible crime.\r\n\r\nLawyer Atticus Finch defends Tom Robinson -- a black man charged with the rape of a white girl. Writing through the young eyes of Finch's children Scout and Jem, Harper Lee explores with rich humor and unswerving honesty the irrationality of adult attitudes toward race and class in small-town Alabama during the mid-1930s Depression years. The conscience of a town steeped in prejudice, violence, and hypocrisy is pricked by the stamina and quiet heroism of one man's struggle for justice. But the weight of history will only tolerate so much.\r\n\r\n\r\n----------\r\nAlso contained in:\r\n\r\n - [Best Sellers from Reader's Digest Condensed Books](https://openlibrary.org/works/OL16035425W)",
+            "links": [
+                {
+                    "title": "VIAF ID: 175855105 (Work)",
+                    "url": "http://viaf.org/viaf/175855105",
+                    "type": {
+                        "key": "/type/link"
+                    }
+                },
+                {
+                    "title": "The New York Times: A Classic Turns 50, and Parties Are Planned",
+                    "url": "http://www.nytimes.com/2010/05/25/books/25mock.html",
+                    "type": {
+                        "key": "/type/link"
+                    }
+                },
+                {
+                    "title": "To Kill a Mockingbird - Wikipedia",
+                    "url": "https://en.wikipedia.org/wiki/To_Kill_a_Mockingbird",
+                    "type": {
+                        "key": "/type/link"
+                    }
+                },
+                {
+                    "title": "To Kill a Mockingbird | Summary, Characters, & Facts | Britannica.com",
+                    "url": "https://www.britannica.com/topic/To-Kill-a-Mockingbird",
+                    "type": {
+                        "key": "/type/link"
+                    }
+                },
+                {
+                    "title": "SparkNotes: To Kill a Mockingbird",
+                    "url": "https://www.sparknotes.com/lit/mocking/",
+                    "type": {
+                        "key": "/type/link"
+                    }
+                },
+                {
+                    "title": "New York Times review",
+                    "url": "http://movies.nytimes.com/2011/05/13/movies/hey-boo-harper-lee-and-to-kill-a-mockingbird.html",
+                    "type": {
+                        "key": "/type/link"
+                    }
+                }
+            ],
+            "covers": [
+                12606502,
+                -1,
+                10630435,
+                9350349,
+                13008583,
+                13526713
+            ],
+            "subject_places": [
+                "Southern States",
+                "Maycomb",
+                "Alabama",
+                "Deep South"
+            ],
+            "subject_people": [
+                "Jean Louise Finch",
+                "Jeremy Finch",
+                "Dill",
+                "Arthur Radley",
+                "Judge Taylor",
+                "Atticus Finch",
+                "Tom Robinson",
+                "Mayella Ewell",
+                "Bob Ewell",
+                "Sheriff Tate",
+                "Atticus Finch (Fictitious character)",
+                "Scout Finch (Fictitious character)"
+            ],
+            "excerpts": [
+                {
+                    "excerpt": "When he was nearly thirteen, my brother Jem got his arm badly broken at the elbow.",
+                    "comment": "first sentence",
+                    "author": {
+                        "key": "/people/seabelis"
+                    }
+                }
+            ],
+            "subjects": [
+                "fiction",
+                "fiction classics",
+                "contemporary fiction",
+                "racial segregation",
+                "mob mentality",
+                "Southern Gothic",
+                "southern life",
+                "racial injustice",
+                "class",
+                "courage",
+                "compassion",
+                "gender roles",
+                "laws",
+                "loss of innocence",
+                "rape trials",
+                "domestic fiction",
+                "legal stories",
+                "Bildungsromans",
+                "Race relations",
+                "Lawyers",
+                "Girls",
+                "Prejudices",
+                "Fathers and daughters",
+                "Trials (Rape)",
+                "Great Depression",
+                "African Americans",
+                "Father-daughter relationship,",
+                "Toleranz",
+                "Kind",
+                "American fiction (fictional works by one author)",
+                "Fiction, coming of age",
+                "Fiction, family life",
+                "Fiction, legal",
+                "Fathers and daughters, fiction",
+                "Southern states, fiction",
+                "Lawyers, fiction",
+                "African americans, fiction",
+                "Social life and customs",
+                "Manners and customs",
+                "Padres e hijas",
+                "Novela",
+                "Relaciones raciales",
+                "Procesos por violaci\u00f3n",
+                "Spanish language materials",
+                "Father-daughter relationship",
+                "New York Times reviewed",
+                "American literature",
+                "Fiction, family life, general",
+                "Large type books",
+                "Muchachas",
+                "Ficci\u00f3n",
+                "Relations raciales",
+                "Romans, nouvelles",
+                "Proc\u00e8s (Viol)",
+                "Filles",
+                "Classics",
+                "Literary",
+                "American fiction",
+                "Estados del Sur (Estados Unidos)",
+                "Juvenile fiction",
+                "Families",
+                "Fiction, general",
+                "Long Now Manual for Civilization",
+                "Fictional Works [Publication Type]",
+                "Rape"
+            ],
+            "subject_times": [
+                "1933-35"
+            ],
+            "first_sentence": {
+                "type": "/type/text",
+                "value": "When he was nearly thirteen, my brother Jem got his arm badly broken at the elbow."
+            },
+            "latest_revision": 6,
+            "revision": 6,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2009-12-10T02:21:18.477125"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2025-05-19T10:32:00.378594"
+            }
+        }
+    ]
+}

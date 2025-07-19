@@ -6,7 +6,7 @@ from pydantic import (
     PastDate,
     FutureDate
 )
-
+from enum import Enum
 from pydantic_extra_types.language_code import LanguageAlpha2
 from pydantic_extra_types.isbn import ISBN
 from typing import Optional, List
@@ -18,6 +18,37 @@ import re
 
 
 DEWEY_SEARCH_PATTERN = re.compile(r'^\d{1,3}\*?$')
+
+class Sort(Enum):
+    editions = "editions"
+    old = "old"
+    new = "new"
+    rating = "rating"
+    rating_asc = "rating asc"
+    rating_desc = "rating desc"
+    # readinglog = "readinglog"
+    # want_to_read = "want_to_read"
+    title = "title"
+    scans = "scans"
+
+    lcc_sort = "lcc_sort"
+    lcc_sort_asc = "lcc_sort asc"
+    lcc_sort_desc = "lcc_sort desc"
+    ddc_sort = "ddc_sort"
+    ddc_sort_asc = "ddc_sort asc"
+    ddc_sort_desc = "ddc_sort desc"
+    ebook_access = "ebook_access"
+    ebook_access_asc = "ebook_access asc"
+    ebook_access_desc = "ebook_access desc"
+    key = "key"
+    key_asc = "key asc"
+    key_desc = "key desc"
+    random = "random"
+    random_asc = "random asc"
+    random_desc = "random desc"
+    random_hourly = "random.hourly"
+    random_daily = "random.daily"
+
 
 class SupportsRange(BaseModel):
     start: str | PastDate
@@ -52,18 +83,18 @@ class DDC(BaseModel):
 class LCC(BaseModel):
     None
 
-class OLQuery(BaseModel):
+class Solr(BaseModel):
     title: str | None = None
     subtitle: str | None = None
-    authors: list[str]| None = None
-    subject: Optional[list[str]] = None
-    place: Optional[list[str]] = None
-    person: Optional[list[str]] = None
-    publisher: Optional[list[str]] = None
-    first_publish_year: Optional[SupportsRange] 
-    ddc: Optional[DDC] = None
-    isbn: Optional[ISBN] = None
-    lcc: Optional[str] = None
+    authors: list[str] | None = None
+    subject: list[str] | None = None
+    place: list[str] | None = None
+    person: list[str] | None = None
+    publisher: list[str] | None = None
+    first_publish_year: SupportsRange | None = None
+    ddc: DDC | None = None
+    isbn: ISBN | None = None
+    lcc: str | None = None
 
     @model_validator(mode="after")
     def validate_min_one(self):
@@ -107,11 +138,11 @@ class OLQuery(BaseModel):
                 for i in v:
                     field_values.append(f'{f}:"{i}"')
                 
-                ored = str.join(" OR ", field_values)
+                ored = " OR ".join(field_values)
                 query.append(f"({ored})")
 
             else:
-                query.append(f'{f}:"{i}"')
+                query.append(f'{f}:"{v}"')
         
         query.append(self.time_range) if self.time_range else None
         
@@ -122,14 +153,14 @@ class OLQuery(BaseModel):
 
 class OLSearch(BaseModel):
     """ Model for an Open Library search """
-    q: OLQuery
-    fields: Optional[List[str]]
-    sort: Optional[str] = "title"
-    lang: Optional[LanguageAlpha2] = 'en'
+    q: Solr
+    fields: List = []
+    sort: str = Sort.title
+    lang: LanguageAlpha2 = 'en'
 
-    @field_validator()
+    @field_validator('sort', mode="before")
     @classmethod
-    def val_sort(cls, sort):
+    def val_sort(cls, sort: str):
         if sort:
             if sort not in OL_SORT:
                 raise OLValidationError("Unkown sort value provided")
@@ -141,3 +172,9 @@ class OLSearch(BaseModel):
             raise OLValidationError("There must be a search query")
         
         return self
+    
+    @model_validator("q", mode="before")
+    @classmethod
+    def q_to_solr(cls, q: Solr):
+        return q.solr
+

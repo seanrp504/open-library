@@ -9,7 +9,7 @@ from pydantic import (
 )
 from typing import Any
 import re
-
+from enum import Enum
 
 OLID_PATTERN = re.compile( r'^OL\d+[MWA]$' )
 CLEAN_PATTERN = re.compile( r'[\s-]' )
@@ -140,34 +140,15 @@ class DeweyDecimal(BaseModel):
         return self
     
 
-class coverSize(BaseModel):
+class coverSize(Enum):
     """ 
     size options [S, M, L]
     Best used via classmethods to create sizes 
     """
-    size: str
+    small = "S"
+    medium = "M"
+    large = "L"
 
-    @field_validator("size", mode="before")
-    @classmethod
-    def validate_size(cls, size: str) -> str:
-        return size.capitalize()
     
-    @model_validator(mode="after")
-    def validate_model(self):
-        if self.size != 'L' or self.size != 'M' or self.size != 'S':
-                raise OLValidationError("Unkown Size use [S, M, L]")
-        return self
-    
-    @classmethod
-    def small(cls):
-        return cls(size="S")
-    
-    @classmethod
-    def medium(cls):
-        return cls(size="M")
-    
-    @classmethod
-    def large(cls):
-        return cls(size="L")
 
 

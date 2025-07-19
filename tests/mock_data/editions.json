@@ -1,0 +1,2586 @@
+{
+    "links": {
+        "self": "/works/OL3140822W/editions.json",
+        "work": "/works/OL3140822W",
+        "next": "/works/OL3140822W/editions.json?offset=50"
+    },
+    "size": 187,
+    "entries": [
+        {
+            "type": {
+                "key": "/type/edition"
+            },
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                }
+            ],
+            "identifiers": {
+                "amazon": [
+                    "B000NZ09MQ"
+                ],
+                "better_world_books": [
+                    "BWB51162679"
+                ]
+            },
+            "local_id": [
+                "urn:bwbsku:O7-AXN-778"
+            ],
+            "publish_date": "1999-01-01",
+            "publishers": [
+                "The Folio Society"
+            ],
+            "source_records": [
+                "promise:bwb_daily_pallets_2023-05-16:O7-AXN-778",
+                "ia:tokillmockingbir0000harp_r4a0"
+            ],
+            "title": "To Kill a Mockingbird (The Folio Society Slipcased Edition)",
+            "full_title": "To Kill a Mockingbird (The Folio Society Slipcased Edition)",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "key": "/books/OL47805046M",
+            "covers": [
+                14817200
+            ],
+            "ocaid": "tokillmockingbir0000harp_r4a0",
+            "languages": [
+                {
+                    "key": "/languages/eng"
+                }
+            ],
+            "number_of_pages": 356,
+            "latest_revision": 5,
+            "revision": 5,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2023-05-18T02:46:01.769853"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2025-05-14T00:26:51.169152"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/edition"
+            },
+            "title": "Matar un rossinyol",
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                },
+                {
+                    "key": "/authors/OL8741634A"
+                }
+            ],
+            "publish_date": "Nov 16, 2010",
+            "source_records": [
+                "amazon:8499302017"
+            ],
+            "number_of_pages": 368,
+            "publishers": [
+                "labutxaca"
+            ],
+            "isbn_10": [
+                "8499302017"
+            ],
+            "isbn_13": [
+                "9788499302010"
+            ],
+            "physical_format": "mass market paperback",
+            "covers": [
+                13526713
+            ],
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "key": "/books/OL47132710M",
+            "latest_revision": 3,
+            "revision": 3,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2023-03-16T20:12:11.442537"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/edition"
+            },
+            "title": "Matar un rossinyol",
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                },
+                {
+                    "key": "/authors/OL8741634A"
+                }
+            ],
+            "publish_date": "Apr 08, 2015",
+            "source_records": [
+                "amazon:8429774491"
+            ],
+            "number_of_pages": 368,
+            "publishers": [
+                "Edicions 62"
+            ],
+            "isbn_10": [
+                "8429774491"
+            ],
+            "isbn_13": [
+                "9788429774498"
+            ],
+            "physical_format": "hardcover",
+            "full_title": "Matar un rossinyol",
+            "covers": [
+                13697416
+            ],
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "key": "/books/OL47250827M",
+            "latest_revision": 3,
+            "revision": 3,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2023-03-20T06:58:09.750765"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/edition"
+            },
+            "title": "Matar un rossinyol",
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                }
+            ],
+            "publish_date": "Nov 22, 2018",
+            "source_records": [
+                "amazon:8417247211"
+            ],
+            "number_of_pages": 288,
+            "publishers": [
+                "Random C\u00f3mic"
+            ],
+            "physical_format": "hardcover",
+            "notes": "Source title: Matar un rossinyol (la novel\u00b7la gr\u00e0fica)",
+            "full_title": "Matar un rossinyol",
+            "covers": [
+                13921056
+            ],
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "key": "/books/OL47333984M",
+            "identifiers": {},
+            "isbn_10": [
+                "8417247211"
+            ],
+            "isbn_13": [
+                "9788417247218"
+            ],
+            "classifications": {},
+            "contributors": [
+                {
+                    "role": "Translator",
+                    "name": "Xavier P\u00e0mies Gim\u00e9nez"
+                }
+            ],
+            "languages": [
+                {
+                    "key": "/languages/cat"
+                }
+            ],
+            "translated_from": [
+                {
+                    "key": "/languages/eng"
+                }
+            ],
+            "latest_revision": 4,
+            "revision": 4,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2023-04-13T02:49:32.020331"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/edition"
+            },
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                }
+            ],
+            "identifiers": {
+                "amazon": [
+                    "B0073WVB4C"
+                ],
+                "better_world_books": [
+                    " "
+                ]
+            },
+            "local_id": [
+                "urn:bwbsku:454-BAC-901"
+            ],
+            "publish_date": "1965-01-01",
+            "publishers": [
+                "McClelland and Stewart Limited"
+            ],
+            "source_records": [
+                "promise:bwb_daily_pallets_2021-09-14"
+            ],
+            "title": "To Kill a Mockingbird",
+            "full_title": "To Kill a Mockingbird",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "key": "/books/OL43223477M",
+            "covers": [
+                14817208
+            ],
+            "latest_revision": 4,
+            "revision": 4,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2022-12-07T21:24:57.183850"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-09-16T17:36:48.440417"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/edition"
+            },
+            "title": "De spotvogel",
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                }
+            ],
+            "publish_date": "Jan 11, 2019",
+            "source_records": [
+                "amazon:9049807011"
+            ],
+            "publishers": [
+                "Dwarsligger"
+            ],
+            "isbn_10": [
+                "9049807011"
+            ],
+            "isbn_13": [
+                "9789049807016"
+            ],
+            "physical_format": "paperback",
+            "notes": {
+                "type": "/type/text",
+                "value": "Source title: De spotvogel (Dutch Edition)"
+            },
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "key": "/books/OL42522122M",
+            "latest_revision": 3,
+            "revision": 3,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2022-12-02T20:35:04.688379"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/edition"
+            },
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                }
+            ],
+            "isbn_13": [
+                "9781473556812"
+            ],
+            "languages": [
+                {
+                    "key": "/languages/eng"
+                }
+            ],
+            "pagination": "320",
+            "publish_date": "2014",
+            "publishers": [
+                "Penguin Random House"
+            ],
+            "source_records": [
+                "bwb:9781473556812"
+            ],
+            "title": "To Kill a Mockingbird (kf8)",
+            "full_title": "To Kill a Mockingbird (kf8)",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "key": "/books/OL40302199M",
+            "covers": [
+                14817238
+            ],
+            "latest_revision": 4,
+            "revision": 4,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2022-11-17T03:10:51.689631"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-09-16T17:42:23.176953"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/edition"
+            },
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                }
+            ],
+            "isbn_13": [
+                "9780063026032"
+            ],
+            "languages": [
+                {
+                    "key": "/languages/spa"
+                }
+            ],
+            "pagination": "448",
+            "publish_date": "2020",
+            "publishers": [
+                "HarperCollins Espa\u00f1ol"
+            ],
+            "source_records": [
+                "bwb:9780063026032"
+            ],
+            "title": "To Kill a Mockingbird Matar a un Ruise\u00f1or (Spanish Edition)",
+            "full_title": "To Kill a Mockingbird Matar a un Ruise\u00f1or (Spanish Edition)",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "key": "/books/OL39956094M",
+            "latest_revision": 3,
+            "revision": 3,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2022-10-18T04:58:55.371250"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "title": "Matar un ruise\u00f1or",
+            "publishers": [
+                "Bruguera"
+            ],
+            "publish_date": "1969",
+            "key": "/books/OL37857228M",
+            "type": {
+                "key": "/type/edition"
+            },
+            "identifiers": {},
+            "classifications": {},
+            "covers": [
+                12733387,
+                12733385,
+                12733383,
+                12733357,
+                12733356,
+                12733354
+            ],
+            "latest_revision": 10,
+            "revision": 10,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2022-05-06T09:45:34.438729"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "title": "Matar un ruise\u00f1or",
+            "publishers": [
+                "Bruguera"
+            ],
+            "publish_date": "2000",
+            "key": "/books/OL37857256M",
+            "type": {
+                "key": "/type/edition"
+            },
+            "covers": [
+                12733389
+            ],
+            "identifiers": {},
+            "classifications": {},
+            "latest_revision": 4,
+            "revision": 4,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2022-05-06T10:38:36.697028"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "title": "Matar un ruise\u00f1or",
+            "publishers": [
+                "Random C\u00f3mics"
+            ],
+            "publish_date": "2020",
+            "key": "/books/OL37813172M",
+            "type": {
+                "key": "/type/edition"
+            },
+            "identifiers": {},
+            "isbn_13": [
+                "9788417247201"
+            ],
+            "classifications": {},
+            "publish_places": [
+                "Barcelona"
+            ],
+            "covers": [
+                12717032
+            ],
+            "latest_revision": 4,
+            "revision": 4,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2022-04-12T09:38:44.084188"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/edition"
+            },
+            "title": "Ubit peresmeshnika...",
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                }
+            ],
+            "publish_date": "Apr 09, 2009",
+            "source_records": [
+                "amazon:5170585306"
+            ],
+            "publishers": [
+                "AST : AST MOSKVA"
+            ],
+            "physical_format": "hardcover",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "key": "/books/OL37807679M",
+            "identifiers": {},
+            "isbn_10": [
+                "5170585306"
+            ],
+            "isbn_13": [
+                "9785170585304"
+            ],
+            "classifications": {},
+            "latest_revision": 4,
+            "revision": 4,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2022-04-09T10:27:53.058293"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "title": "\u0423\u0431\u0438\u0442\u044c \u043f\u0435\u0440\u0435\u0441\u043c\u0435\u0448\u043d\u0438\u043a\u0430",
+            "publishers": [
+                "\u041b\u0435\u043d\u0438\u0437\u0434\u0430\u0442"
+            ],
+            "publish_date": "1988",
+            "key": "/books/OL48575836M",
+            "type": {
+                "key": "/type/edition"
+            },
+            "identifiers": {},
+            "covers": [
+                14360757
+            ],
+            "isbn_10": [
+                "5289002014"
+            ],
+            "classifications": {},
+            "contributors": [
+                {
+                    "role": "Translator",
+                    "name": "\u041d. \u0413\u0430\u043b\u044c"
+                },
+                {
+                    "role": "Translator",
+                    "name": "\u0420. \u041e\u0431\u043b\u043e\u043d\u0441\u043a\u0430\u044f"
+                }
+            ],
+            "publish_places": [
+                "\u041b\u0435\u043d\u0438\u043d\u0433\u0440\u0430\u0434"
+            ],
+            "number_of_pages": 287,
+            "languages": [
+                {
+                    "key": "/languages/rus"
+                }
+            ],
+            "physical_format": "Paperback",
+            "latest_revision": 4,
+            "revision": 4,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2023-06-24T10:15:05.033292"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/edition"
+            },
+            "title": "Matar a un ruise\u00f1or",
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                },
+                {
+                    "key": "/authors/OL7920473A"
+                }
+            ],
+            "publish_date": "Jul 21, 2015",
+            "source_records": [
+                "amazon:0718076842"
+            ],
+            "publishers": [
+                "HarperCollins Espa\u00f1ol"
+            ],
+            "isbn_10": [
+                "0718076842"
+            ],
+            "isbn_13": [
+                "9780718076849"
+            ],
+            "physical_format": "audio cd",
+            "notes": {
+                "type": "/type/text",
+                "value": "Source title: Matar a un ruise\u00f1or (To Kill a Mockingbird - Spanish Edition)"
+            },
+            "full_title": "Matar a un ruise\u00f1or",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "key": "/books/OL37365246M",
+            "latest_revision": 3,
+            "revision": 3,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2022-02-28T23:57:32.869421"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "title": "Matar a un ruise\u00f1or",
+            "publish_date": "2022",
+            "publishers": [
+                "Harper Collins Ib\u00e9rica"
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "covers": [
+                13008583
+            ],
+            "isbn_13": [
+                "9788417216948"
+            ],
+            "local_id": [
+                "urn:bwbsku:KQ-800-181"
+            ],
+            "source_records": [
+                "promise:bwb_daily_pallets_2022-05-23",
+                "amazon:8417216944"
+            ],
+            "key": "/books/OL40968613M",
+            "number_of_pages": 381,
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "latest_revision": 7,
+            "revision": 7,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2022-11-22T11:40:13.865000"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/edition"
+            },
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                }
+            ],
+            "isbn_13": [
+                "9780062877772"
+            ],
+            "languages": [
+                {
+                    "key": "/languages/eng"
+                }
+            ],
+            "pagination": "320",
+            "publish_date": "2019",
+            "publishers": [
+                "HarperCollins Publishers"
+            ],
+            "source_records": [
+                "bwb:9780062877772"
+            ],
+            "title": "Avem Occidere Mimicam",
+            "subtitle": "To Kill a Mockingbird Translated into Latin for the First Time by Andrew Wilson",
+            "full_title": "Avem Occidere Mimicam To Kill a Mockingbird Translated into Latin for the First Time by Andrew Wilson",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "key": "/books/OL35961621M",
+            "latest_revision": 3,
+            "revision": 3,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2021-12-27T08:49:55.395623"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "publishers": [
+                "Souvenir Press Limited"
+            ],
+            "subtitle": "To Kill a Mockingbird Translated into Latin",
+            "source_records": [
+                "bwb:9780285643864",
+                "promise:bwb_daily_pallets_2022-12-28"
+            ],
+            "title": "Avem Occidere Mimicam",
+            "number_of_pages": 320,
+            "isbn_13": [
+                "9780285643864"
+            ],
+            "languages": [
+                {
+                    "key": "/languages/eng"
+                }
+            ],
+            "full_title": "Avem Occidere Mimicam To Kill a Mockingbird Translated into Latin",
+            "lc_classifications": [
+                "PS3562.E353"
+            ],
+            "publish_date": "2019",
+            "key": "/books/OL30597961M",
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                }
+            ],
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "subjects": [
+                "African americans, fiction",
+                "Southern states, fiction",
+                "Lawyers, fiction",
+                "Fiction, general"
+            ],
+            "local_id": [
+                "urn:bwbsku:KS-009-117"
+            ],
+            "latest_revision": 4,
+            "revision": 4,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2020-10-11T17:35:39.377990"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "title": "Ne tirez pas sur l'oiseau moqueur",
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                }
+            ],
+            "publish_date": "Apr 26, 2005",
+            "publishers": [
+                "FALLOIS"
+            ],
+            "source_records": [
+                "amazon:2877065502"
+            ],
+            "covers": [
+                9350349
+            ],
+            "physical_format": "paperback",
+            "type": {
+                "key": "/type/edition"
+            },
+            "key": "/books/OL27961968M",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "identifiers": {},
+            "classifications": {},
+            "languages": [
+                {
+                    "key": "/languages/fre"
+                }
+            ],
+            "ocaid": "netirezpassurloi0000harp",
+            "isbn_10": [
+                "2877065502"
+            ],
+            "isbn_13": [
+                "9782877065504"
+            ],
+            "series": [
+                "Le livre de poche"
+            ],
+            "contributors": [
+                {
+                    "role": "Translator",
+                    "name": "Isabelle Stoianov"
+                },
+                {
+                    "role": "Afterword",
+                    "name": "Isabelle Hausser"
+                }
+            ],
+            "translation_of": "to kill a mockingbird",
+            "translated_from": [
+                {
+                    "key": "/languages/eng"
+                }
+            ],
+            "latest_revision": 6,
+            "revision": 6,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2020-04-26T12:50:04.663776"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-10-06T11:27:28.231939"
+            }
+        },
+        {
+            "publishers": [
+                "J. B. Lippincott & Co."
+            ],
+            "publish_date": "1960",
+            "key": "/books/OL27318295M",
+            "title": "to kill a mocking bird",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "identifiers": {},
+            "classifications": {},
+            "covers": [
+                14817195
+            ],
+            "latest_revision": 11,
+            "revision": 11,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2019-09-21T17:46:28.237133"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-09-16T17:27:55.524914"
+            }
+        },
+        {
+            "publishers": [
+                "Ediciones B"
+            ],
+            "title": "Matar a un ruise\u00f1or",
+            "covers": [
+                10630435,
+                7373427
+            ],
+            "publish_date": "2015",
+            "key": "/books/OL25779968M",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "identifiers": {},
+            "isbn_13": [
+                "9788490701218"
+            ],
+            "classifications": {},
+            "source_records": [
+                "amazon:8490701210",
+                "promise:bwb_daily_pallets_2022-09-12"
+            ],
+            "local_id": [
+                "urn:bwbsku:W7-CNM-898"
+            ],
+            "latest_revision": 9,
+            "revision": 9,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2015-10-21T16:10:10.754640"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/edition"
+            },
+            "title": "Matar a un ruise\u00f1or",
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                },
+                {
+                    "key": "/authors/OL11979554A"
+                }
+            ],
+            "publish_date": "Jan 23, 2008",
+            "source_records": [
+                "amazon:8496778282"
+            ],
+            "number_of_pages": 416,
+            "publishers": [
+                "ZETA BOLSILLO"
+            ],
+            "physical_format": "paperback",
+            "full_title": "MATAR A UN RUISE\u00d1OR",
+            "covers": [
+                13113522
+            ],
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "key": "/books/OL44883439M",
+            "identifiers": {},
+            "isbn_10": [
+                "8496778282"
+            ],
+            "isbn_13": [
+                "9788496778283"
+            ],
+            "description": {
+                "type": "/type/text",
+                "value": "Jean Louise Finch evoca una \u00e9poca de su infancia en Alabama (EE. UU), cuando su padre, Atticus, decidi\u00f3 defender ante los tribunales a un hombre negro acusado de violar a una mujer blanca. Matar un ruise\u00f1or muestra una comunidad dominada por los prejuicios raciales, la desconfianza hacia lo diferente, la rigidez de los v\u00ednculos familiares y vecinales, y un sistema judicial sin apenas garant\u00edas para la poblaci\u00f3n de color."
+            },
+            "latest_revision": 4,
+            "revision": 4,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2022-12-24T02:42:29.562637"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2025-06-30T05:22:34.878360"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/edition"
+            },
+            "title": "Matar a un ruise\u00f1or",
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                },
+                {
+                    "key": "/authors/OL12762574A"
+                }
+            ],
+            "publish_date": "Nov 08, 2017",
+            "source_records": [
+                "amazon:8491392254"
+            ],
+            "number_of_pages": 360,
+            "publishers": [
+                "HarperCollins"
+            ],
+            "isbn_10": [
+                "8491392254"
+            ],
+            "isbn_13": [
+                "9788491392255"
+            ],
+            "physical_format": "paperback",
+            "full_title": "Matar a un ruise\u00f1or",
+            "covers": [
+                14289893
+            ],
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "key": "/books/OL47663143M",
+            "latest_revision": 3,
+            "revision": 3,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2023-04-21T11:55:58.549852"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/edition"
+            },
+            "title": "Matar a un ruise\u00f1or",
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                },
+                {
+                    "key": "/authors/OL12762574A"
+                }
+            ],
+            "publish_date": "Nov 08, 2017",
+            "source_records": [
+                "amazon:8491392254"
+            ],
+            "number_of_pages": 360,
+            "publishers": [
+                "HarperCollins"
+            ],
+            "isbn_10": [
+                "8491392254"
+            ],
+            "isbn_13": [
+                "9788491392255"
+            ],
+            "physical_format": "paperback",
+            "full_title": "Matar a un ruise\u00f1or",
+            "covers": [
+                14289894
+            ],
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "key": "/books/OL47663141M",
+            "latest_revision": 3,
+            "revision": 3,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2023-04-21T11:55:58.552786"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "type": {
+                "key": "/type/edition"
+            },
+            "title": "Matar a un ruise\u00f1or",
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                },
+                {
+                    "key": "/authors/OL12762574A"
+                }
+            ],
+            "publish_date": "Nov 08, 2017",
+            "source_records": [
+                "amazon:8491392254"
+            ],
+            "number_of_pages": 360,
+            "publishers": [
+                "HarperCollins"
+            ],
+            "isbn_10": [
+                "8491392254"
+            ],
+            "isbn_13": [
+                "9788491392255"
+            ],
+            "physical_format": "paperback",
+            "full_title": "Matar a un ruise\u00f1or",
+            "covers": [
+                14289895
+            ],
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "key": "/books/OL47663142M",
+            "latest_revision": 3,
+            "revision": 3,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2023-04-21T11:55:58.562847"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "publishers": [
+                "Sundance Pubns"
+            ],
+            "title": "To Kill a Mockingbird/Hc00033",
+            "isbn_13": [
+                "9789992262443"
+            ],
+            "physical_format": "Paperback",
+            "isbn_10": [
+                "9992262443"
+            ],
+            "publish_date": "June 1990",
+            "key": "/books/OL9205653M",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "subjects": [
+                "Legal",
+                "Literature: Classics",
+                "Classics",
+                "Fiction"
+            ],
+            "latest_revision": 4,
+            "revision": 4,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2008-04-30T09:38:13.731961"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "publishers": [
+                "Ediciones B"
+            ],
+            "source_records": [
+                "marc:marc_openlibraries_sanfranciscopubliclibrary/sfpl_chq_2018_12_24_run05.mrc:79583899:2660",
+                "ia:matarunruiseor0000leeh"
+            ],
+            "title": "Matar un ruise\u00f1or",
+            "covers": [
+                12907441
+            ],
+            "local_id": [
+                "urn:sfpl:31223108274219",
+                "urn:sfpl:31223108274227",
+                "urn:sfpl:31223108274201"
+            ],
+            "publish_date": "2010",
+            "key": "/books/OL25619504M",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "identifiers": {},
+            "ocaid": "matarunruiseor0000leeh",
+            "isbn_13": [
+                "9788498722734"
+            ],
+            "oclc_numbers": [
+                "738352901"
+            ],
+            "classifications": {},
+            "lc_classifications": [
+                "PS3562.E353 T618 2011"
+            ],
+            "languages": [
+                {
+                    "key": "/languages/spa"
+                }
+            ],
+            "latest_revision": 12,
+            "revision": 12,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2014-09-05T16:45:26.070400"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "publishers": [
+                "Penguin Books"
+            ],
+            "languages": [
+                {
+                    "key": "/languages/eng"
+                }
+            ],
+            "title": "To kill a mockingbird",
+            "number_of_pages": 285,
+            "covers": [
+                14856323,
+                14845127,
+                14845125,
+                12907439
+            ],
+            "physical_format": "Paperback",
+            "publish_date": "1963",
+            "key": "/books/OL25228947M",
+            "publish_places": [
+                "UK"
+            ],
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "identifiers": {},
+            "ocaid": "tokillmockingbir0000harp",
+            "classifications": {},
+            "oclc_numbers": [
+                "465761263"
+            ],
+            "source_records": [
+                "ia:tokillmockingbir0000harp"
+            ],
+            "latest_revision": 13,
+            "revision": 13,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2012-03-13T00:07:51.012723"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2025-04-02T02:42:48.272494"
+            }
+        },
+        {
+            "publishers": [
+                "Grand Central Publishing"
+            ],
+            "publish_date": "published in 1960",
+            "key": "/books/OL25432584M",
+            "title": "To Kill A Mockingbird",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "covers": [
+                14817211
+            ],
+            "latest_revision": 5,
+            "revision": 5,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2013-10-21T20:55:46.712477"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-09-16T17:36:59.745320"
+            }
+        },
+        {
+            "publishers": [
+                "Caedmon"
+            ],
+            "languages": [
+                {
+                    "key": "/languages/eng"
+                }
+            ],
+            "description": {
+                "type": "/type/text",
+                "value": "One of the best-loved stories of all time, To Kill a Mockingbird has been translated into more than 40 languages, sold more than 30 million copies worldwide, served as the basis for an enormously popular motion picture, and was voted one of the best novels of the 20th century by librarians across the country. A gripping, heart-wrenching, and wholly remarkable tale of coming-of-age in a South poisoned by virulent prejudice, it views a world of great beauty and savage inequities through the eyes of a young girl, as her father - a crusading local lawyer - risks everything to defend a black man unjustly accused of a terrible crime."
+            },
+            "contributors": [
+                {
+                    "role": "Narrator",
+                    "name": "Sissy Spacek"
+                }
+            ],
+            "title": "To Kill a Mockingbird",
+            "identifiers": {
+                "amazon": [
+                    "B00K1HPPXO"
+                ]
+            },
+            "covers": [
+                8411084
+            ],
+            "physical_format": "Digital Audio",
+            "publish_date": "2006",
+            "key": "/books/OL26761631M",
+            "copyright_date": "2006",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "latest_revision": 6,
+            "revision": 6,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2019-03-07T18:45:31.265998"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "publishers": [
+                "Harpercollins publishers"
+            ],
+            "publish_date": "july 08,2014",
+            "key": "/books/OL25637990M",
+            "title": "to kill a mockingbird",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "covers": [
+                14817198
+            ],
+            "latest_revision": 5,
+            "revision": 5,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2014-11-04T18:28:48.472574"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-09-16T17:30:44.498844"
+            }
+        },
+        {
+            "publishers": [
+                "Livre de Poche"
+            ],
+            "title": "Ne Tirez Pas Sur LOiseau Moqueur  To Kill a Mockingbird                            Le Livre de Poche",
+            "covers": [
+                7784060
+            ],
+            "isbn_13": [
+                "9782253115847"
+            ],
+            "publish_date": "2006",
+            "key": "/books/OL26131085M",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "latest_revision": 6,
+            "revision": 6,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2016-10-14T19:13:53.161017"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "publishers": [
+                "Tandem Library"
+            ],
+            "languages": [
+                {
+                    "key": "/languages/eng"
+                }
+            ],
+            "title": "Matar Un Ruisenor (to Kill a Mockingbird)",
+            "identifiers": {
+                "librarything": [
+                    "3092"
+                ],
+                "goodreads": [
+                    "3698384"
+                ]
+            },
+            "isbn_13": [
+                "9780613054492"
+            ],
+            "isbn_10": [
+                "0613054490"
+            ],
+            "publish_date": "December 31, 1995",
+            "key": "/books/OL7587148M",
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                }
+            ],
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "latest_revision": 8,
+            "revision": 8,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2008-04-29T13:35:46.876380"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "publishers": [
+                "G K Hall & Co"
+            ],
+            "weight": "1.2 pounds",
+            "series": [
+                "(G K Hall Large Print Book Series)"
+            ],
+            "physical_format": "Paperback",
+            "key": "/books/OL9309616M",
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                }
+            ],
+            "subjects": [
+                "Southern States",
+                "Literature: Classics",
+                "Girls",
+                "Literature - Classics / Criticism",
+                "Trials (Rape)",
+                "Race relations",
+                "Fathers and daughters",
+                "Fiction",
+                "Classics",
+                "Legal"
+            ],
+            "edition_name": "Largeprint edition",
+            "languages": [
+                {
+                    "key": "/languages/eng"
+                }
+            ],
+            "first_sentence": {
+                "type": "/type/text",
+                "value": "When he was nearly thirteen, my brother Jem got his arm badly broken at the elbow."
+            },
+            "title": "To Kill a Mockingbird",
+            "identifiers": {
+                "librarything": [
+                    "3092"
+                ]
+            },
+            "isbn_13": [
+                "9780816152414"
+            ],
+            "isbn_10": [
+                "0816152411"
+            ],
+            "publish_date": "February 1992",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "physical_dimensions": "9.2 x 6.2 x 0.8 inches",
+            "latest_revision": 7,
+            "revision": 7,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2008-04-30T09:38:13.731961"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "publishers": [
+                "Harper Perennial Modern Classics"
+            ],
+            "number_of_pages": 323,
+            "description": {
+                "type": "/type/text",
+                "value": "One of the best-loved stories of all time, To Kill a Mockingbird has been translated into more than forty languages, sold more than thirty million copies worldwide, served as the basis of an enormously popular motion picture, and was voted one of the best novels of the twentieth century by librarians across the country. A gripping, heart wrenching, and wholly remarkable tale of coming-of-age in a South poisoned by viruletn prejudice, it views a world of great beauty and savage inequities through the eyes of a youn girl, as her father--a crusading local lawyer--risks everything to defend a black man unjustly accused of a terrible crime.\r\n(front flap)"
+            },
+            "weight": "13.6 ounces",
+            "isbn_10": [
+                "0061120081"
+            ],
+            "covers": [
+                14351032
+            ],
+            "physical_format": "Paperback",
+            "lc_classifications": [
+                "PS3562 .E353 T6"
+            ],
+            "key": "/books/OL9242848M",
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                }
+            ],
+            "ocaid": "tokillmockingbir00harp",
+            "publish_places": [
+                "New York, USA"
+            ],
+            "languages": [
+                {
+                    "key": "/languages/eng"
+                }
+            ],
+            "source_records": [
+                "bwb:9780061120084",
+                "amazon:0061120081",
+                "idb:9780061120084"
+            ],
+            "title": "To Kill a Mockingbird",
+            "notes": {
+                "type": "/type/text",
+                "value": "USA/CAN"
+            },
+            "identifiers": {
+                "paperback_swap": [
+                    "0061120081"
+                ],
+                "goodreads": [
+                    "44299343"
+                ],
+                "librarything": [
+                    "3092"
+                ]
+            },
+            "isbn_13": [
+                "9780061120084"
+            ],
+            "edition_name": "First Harper Perennial Modern Classics Edition (3)",
+            "subjects": [
+                "Lee, Harper - Prose & Criticism",
+                "Fiction",
+                "Literature - Classics / Criticism",
+                "Literature: Classics",
+                "Classics",
+                "Fiction / Literary"
+            ],
+            "publish_date": "2006",
+            "copyright_date": "1988",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "physical_dimensions": "8.1 x 5.5 x 1.1 inches",
+            "latest_revision": 20,
+            "revision": 20,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2008-04-30T09:38:13.731961"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "publishers": [
+                "HarperCollins"
+            ],
+            "identifiers": {
+                "goodreads": [
+                    "2661"
+                ],
+                "librarything": [
+                    "3092"
+                ]
+            },
+            "weight": "1.1 pounds",
+            "covers": [
+                47148
+            ],
+            "physical_format": "Hardcover",
+            "lc_classifications": [
+                ""
+            ],
+            "key": "/books/OL9243795M",
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                }
+            ],
+            "subjects": [
+                "Lee, Harper - Prose & Criticism",
+                "Fiction",
+                "Literature - Classics / Criticism",
+                "Classics",
+                "Literary",
+                "Fiction / Literary"
+            ],
+            "isbn_13": [
+                "9780061205699"
+            ],
+            "source_records": [
+                "bwb:9780061205699"
+            ],
+            "title": "To Kill a Mockingbird (slipcased edition)",
+            "number_of_pages": 336,
+            "languages": [
+                {
+                    "key": "/languages/eng"
+                }
+            ],
+            "isbn_10": [
+                "0061205699"
+            ],
+            "publish_date": "October 17, 2006",
+            "oclc_numbers": [
+                "122941036"
+            ],
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "physical_dimensions": "8.9 x 6.1 x 1.4 inches",
+            "latest_revision": 12,
+            "revision": 12,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2008-04-30T09:38:13.731961"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "publishers": [
+                "Harper"
+            ],
+            "source_records": [
+                "marc:marc_marygrove/marygrovecollegelibrary.full.D20191108.T213022.internetarchive2nd_REPACK.mrc:140242425:3950",
+                "ia:tokillmockingbir0000leeh_p8s0",
+                "bwb:9780061743528",
+                "marc:marc_columbia/Columbia-extract-20221130-016.mrc:177726904:1871",
+                "marc:harvard_bibliographic_metadata/ab.bib.12.20150123.full.mrc:517303068:1224"
+            ],
+            "title": "To Kill a Mockingbird",
+            "covers": [
+                12606566
+            ],
+            "local_id": [
+                "urn:mgc:31927000792306"
+            ],
+            "publish_date": "2010",
+            "key": "/books/OL24227030M",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "identifiers": {},
+            "ocaid": "tokillmockingbir0000leeh_p8s0",
+            "isbn_10": [
+                "0061743526"
+            ],
+            "isbn_13": [
+                "9780061743528"
+            ],
+            "lccn": [
+                "95191280"
+            ],
+            "oclc_numbers": [
+                "456180368"
+            ],
+            "classifications": {},
+            "lc_classifications": [
+                "PS3562.E353 T6 1999",
+                "PS3562.E353",
+                "PS3562.E353 T6 2010",
+                "PS3562.E353 To 2010"
+            ],
+            "languages": [
+                {
+                    "key": "/languages/eng"
+                }
+            ],
+            "latest_revision": 15,
+            "revision": 15,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2010-05-10T18:38:11.350333"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "publishers": [
+                "Minerva"
+            ],
+            "description": {
+                "type": "/type/text",
+                "value": "\"Shoot all the bluejays you want, if you can hit 'em, but remember it's a sin to kill a mockingbird.\"\r\n\r\nA lawyer's advice to his children as he defends the real mockingbird of Harper Lee's classic novel--a black man charged with the rape of a white girl in the Deep South of the thirties.\r\n(back cover)"
+            },
+            "isbn_10": [
+                "0749398086"
+            ],
+            "covers": [
+                8410839
+            ],
+            "physical_format": "Paperback",
+            "key": "/books/OL7966750M",
+            "ocaid": "tokillmockingbir00cole",
+            "publish_places": [
+                "London, England"
+            ],
+            "languages": [
+                {
+                    "key": "/languages/eng"
+                }
+            ],
+            "source_records": [
+                "ia:tokillmockingbir00cole",
+                "bwb:9780749398088",
+                "idb:9780749398088"
+            ],
+            "title": "To Kill a Mockingbird",
+            "notes": {
+                "type": "/type/text",
+                "value": "UK"
+            },
+            "identifiers": {
+                "google": [
+                    "-NDCQgAACAAJ"
+                ],
+                "librarything": [
+                    "3092"
+                ],
+                "goodreads": [
+                    "44299129"
+                ]
+            },
+            "isbn_13": [
+                "9780749398088"
+            ],
+            "edition_name": "4th reprint",
+            "subjects": [
+                "Literature - Classics / Criticism",
+                "Classics"
+            ],
+            "publish_date": "1992",
+            "copyright_date": "1960",
+            "oclc_numbers": [
+                "255176931"
+            ],
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "first_sentence": {
+                "type": "/type/text",
+                "value": "When he was nearly thirteen, my brother Jem got his arm badly broken at the elbow."
+            },
+            "number_of_pages": 320,
+            "latest_revision": 15,
+            "revision": 15,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2008-04-29T15:03:11.581851"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "publishers": [
+                "Recorded Books"
+            ],
+            "title": "To Kill a Mockingbird (88640)",
+            "identifiers": {
+                "goodreads": [
+                    "2193926"
+                ]
+            },
+            "isbn_13": [
+                "9789999589604"
+            ],
+            "physical_format": "Audio cassette",
+            "isbn_10": [
+                "1556905173"
+            ],
+            "publish_date": "June 1988",
+            "key": "/books/OL9325242M",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "subjects": [
+                "FIC",
+                "FIC004000",
+                "FIC034000",
+                "Classics",
+                "Fiction",
+                "Legal",
+                "Audio Adult: Books On Tape"
+            ],
+            "covers": [
+                13847234
+            ],
+            "source_records": [
+                "amazon:999958960X"
+            ],
+            "latest_revision": 10,
+            "revision": 10,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2008-04-30T09:38:13.731961"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "publishers": [
+                "Heinemann Educational Publishers"
+            ],
+            "number_of_pages": 288,
+            "title": "To Kill a Mockingbird",
+            "notes": {
+                "type": "/type/text",
+                "value": "New Windmill"
+            },
+            "identifiers": {
+                "librarything": [
+                    "3092"
+                ],
+                "goodreads": [
+                    "87784"
+                ]
+            },
+            "covers": [
+                274797
+            ],
+            "isbn_13": [
+                "9780435120962"
+            ],
+            "isbn_10": [
+                "0435120964"
+            ],
+            "publish_date": "September 5, 1966",
+            "key": "/books/OL7508066M",
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                }
+            ],
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "latest_revision": 10,
+            "revision": 10,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2008-04-29T13:35:46.876380"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "publishers": [
+                "Caedmon"
+            ],
+            "languages": [
+                {
+                    "key": "/languages/eng"
+                }
+            ],
+            "title": "To Kill A Mockingbird Cassette",
+            "type": {
+                "key": "/type/edition"
+            },
+            "identifiers": {
+                "goodreads": [
+                    "2187995"
+                ],
+                "librarything": [
+                    "3092"
+                ]
+            },
+            "covers": [
+                39196
+            ],
+            "isbn_13": [
+                "9780060888701"
+            ],
+            "isbn_10": [
+                "0060888709"
+            ],
+            "publish_date": "August 22, 2006",
+            "key": "/books/OL7283621M",
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                }
+            ],
+            "oclc_numbers": [
+                "71195368"
+            ],
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "contributions": [
+                "Sissy Spacek (Narrator)"
+            ],
+            "latest_revision": 10,
+            "revision": 10,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2008-04-29T13:35:46.876380"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "publishers": [
+                "Mandarin"
+            ],
+            "title": "To Kill a Mockingbird - Hhp EDT",
+            "identifiers": {
+                "goodreads": [
+                    "391061"
+                ],
+                "librarything": [
+                    "3092"
+                ]
+            },
+            "isbn_13": [
+                "9783883890395"
+            ],
+            "covers": [
+                1034773
+            ],
+            "physical_format": "Paperback",
+            "isbn_10": [
+                "3883890391"
+            ],
+            "key": "/books/OL9009139M",
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                }
+            ],
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "source_records": [
+                "bwb:9783883890395"
+            ],
+            "latest_revision": 11,
+            "revision": 11,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2008-04-30T09:38:13.731961"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "publishers": [
+                "Tandem Library"
+            ],
+            "languages": [
+                {
+                    "key": "/languages/eng"
+                }
+            ],
+            "title": "To Kill a Mockingbird",
+            "type": {
+                "key": "/type/edition"
+            },
+            "isbn_13": [
+                "9780613708333"
+            ],
+            "physical_format": "Hardcover",
+            "isbn_10": [
+                "0613708334"
+            ],
+            "publish_date": "January 2004",
+            "key": "/books/OL9732254M",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "contributions": [
+                "Harold Bloom (Editor)",
+                "Henry W. Berg (Editor)",
+                "Albert A. Berg (Editor)"
+            ],
+            "subjects": [
+                "General",
+                "Literary Criticism",
+                "Children's 12-Up - Literature - Classics",
+                "Children's Books/Young Adult Misc. Nonfiction"
+            ],
+            "covers": [
+                14817229
+            ],
+            "latest_revision": 5,
+            "revision": 5,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2008-04-30T09:38:13.731961"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-09-16T17:40:49.674940"
+            }
+        },
+        {
+            "publishers": [
+                "HarperCollins"
+            ],
+            "title": "Matar a un ruise\u00f1or",
+            "isbn_13": [
+                "9788468767024"
+            ],
+            "covers": [
+                7376945
+            ],
+            "languages": [
+                {
+                    "key": "/languages/spa"
+                }
+            ],
+            "publish_date": "2015",
+            "key": "/books/OL25839139M",
+            "publish_places": [
+                "Madrid, Spain"
+            ],
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "latest_revision": 7,
+            "revision": 7,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2015-11-10T18:05:54.507556"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "publishers": [
+                "Turtleback Books Distributed by Demco Media"
+            ],
+            "languages": [
+                {
+                    "key": "/languages/spa"
+                }
+            ],
+            "weight": "10.4 ounces",
+            "title": "Matar Un Ruisenor / to Kill a Mockingbird",
+            "identifiers": {
+                "goodreads": [
+                    "2264127"
+                ]
+            },
+            "isbn_13": [
+                "9780606287647"
+            ],
+            "physical_format": "Turtleback",
+            "isbn_10": [
+                "0606287647"
+            ],
+            "publish_date": "July 2003",
+            "key": "/books/OL10943325M",
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                }
+            ],
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "subjects": [
+                "General",
+                "Fiction",
+                "Spanish: Adult Fiction"
+            ],
+            "physical_dimensions": "7.2 x 4.5 x 1.2 inches",
+            "latest_revision": 7,
+            "revision": 7,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2008-04-30T09:38:13.731961"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "publishers": [
+                "Dn"
+            ],
+            "publish_date": "2009",
+            "key": "/books/OL26705748M",
+            "title": "To kill a mockingbird",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "covers": [
+                14817199
+            ],
+            "latest_revision": 6,
+            "revision": 6,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2019-02-14T18:28:44.023423"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-09-16T17:30:48.015530"
+            }
+        },
+        {
+            "publishers": [
+                "Grand Central Publishing"
+            ],
+            "number_of_pages": 376,
+            "description": "The unforgettable novel of a childhood in a sleepy Southern town and the crisis of conscience that rocked it, To Kill A Mockingbird became both an instant bestseller and a critical success when it was first published in 1960. It went on to win the Pulitzer Prize in 1961 and was later made into an Academy Award-winning film, also a classic.\r\n\r\nCompassionate, dramatic, and deeply moving, To Kill A Mockingbird takes readers to the roots of human behavior - to innocence and experience, kindness and cruelty, love and hatred, humor and pathos. Now with over 18 million copies in print and translated into forty languages, this regional story by a young Alabama woman claims universal appeal. Harper Lee always considered her book to be a simple love story. Today it is regarded as a masterpiece of American literature.\r\n(back cover)",
+            "covers": [
+                15089752,
+                14957841,
+                14937837,
+                14820007,
+                14649208,
+                14351036,
+                -1
+            ],
+            "physical_format": "Library Binding",
+            "copyright_date": "1960",
+            "full_title": "To kill a mockingbird",
+            "key": "/books/OL26344076M",
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                }
+            ],
+            "publish_places": [
+                "New York, USA"
+            ],
+            "edition_name": "1st mass mkt. ed. (95)",
+            "pagination": "376 pages ;",
+            "source_records": [
+                "ia:tokillmockingbir00pawp"
+            ],
+            "title": "To Kill a Mockingbird",
+            "notes": "Paw Prints",
+            "identifiers": {
+                "alibris_id": [
+                    "1439550417"
+                ],
+                "goodreads": [
+                    "44298713"
+                ]
+            },
+            "languages": [
+                {
+                    "key": "/languages/eng"
+                }
+            ],
+            "subject_places": [
+                "Alabama",
+                "Southern States"
+            ],
+            "subjects": [
+                "Fathers and daughters",
+                "Race relations",
+                "Fiction",
+                "Girls",
+                "Trials (Rape)"
+            ],
+            "subject_people": [
+                "Atticus Finch (Fictitious character)",
+                "Scout Finch (Fictitious character)"
+            ],
+            "publish_country": "nyu",
+            "publish_date": "/1993",
+            "by_statement": "Harper Lee",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "classifications": {},
+            "ocaid": "tokillmockingbir00pawp",
+            "isbn_10": [
+                "1439550417"
+            ],
+            "isbn_13": [
+                "9781439550410"
+            ],
+            "oclc_numbers": [
+                "246900034"
+            ],
+            "dewey_decimal_class": [
+                "813/.54"
+            ],
+            "lc_classifications": [
+                "PS3562.E353 T6 2008x"
+            ],
+            "latest_revision": 20,
+            "revision": 20,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2017-06-25T00:09:59.332711"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2025-06-24T15:20:08.588383"
+            }
+        },
+        {
+            "publishers": [
+                "harper lee"
+            ],
+            "publish_date": "2001",
+            "key": "/books/OL26424428M",
+            "title": "to kill a mockingbird",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "covers": [
+                14817204
+            ],
+            "latest_revision": 6,
+            "revision": 6,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2018-02-07T01:38:29.054498"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-09-16T17:31:38.096256"
+            }
+        },
+        {
+            "publishers": [
+                "Byblos"
+            ],
+            "identifiers": {
+                "librarything": [
+                    "3092"
+                ],
+                "goodreads": [
+                    "455592"
+                ]
+            },
+            "weight": "2.2 pounds",
+            "covers": [
+                12606569
+            ],
+            "physical_format": "Paperback",
+            "key": "/books/OL9134382M",
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                }
+            ],
+            "subjects": [
+                "Lee, Harper - Prose & Criticism",
+                "Popular American Fiction",
+                "Fiction",
+                "Fiction - General",
+                "Spanish: Adult Fiction",
+                "Classics",
+                "Literary",
+                "Fiction / Classics",
+                "Legal"
+            ],
+            "edition_name": "Tra edition",
+            "languages": [
+                {
+                    "key": "/languages/spa"
+                }
+            ],
+            "title": "Matar un ruisenor",
+            "number_of_pages": 410,
+            "publish_date": "2008",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "physical_dimensions": "6.9 x 4.3 x 0.5 inches",
+            "source_records": [
+                "ia:matarunruisenor0000leeh_l0z4"
+            ],
+            "ocaid": "matarunruisenor0000leeh_l0z4",
+            "isbn_10": [
+                "846662676X"
+            ],
+            "isbn_13": [
+                "9788466626767"
+            ],
+            "classifications": {},
+            "lc_classifications": [
+                "PS3562.E353 T618 2006"
+            ],
+            "latest_revision": 15,
+            "revision": 15,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2008-04-30T09:38:13.731961"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        },
+        {
+            "publishers": [
+                "McClelland & Stewart"
+            ],
+            "pagination": "312 p.",
+            "title": "To kill a mocking bird",
+            "dewey_decimal_class": [
+                "818 L478t"
+            ],
+            "notes": {
+                "type": "/type/text",
+                "value": "5"
+            },
+            "number_of_pages": 312,
+            "languages": [
+                {
+                    "key": "/languages/eng"
+                }
+            ],
+            "publish_date": "1965",
+            "publish_country": "xx ",
+            "key": "/books/OL22199990M",
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                }
+            ],
+            "by_statement": "Notes and questions by D.G. Rutledge",
+            "publish_places": [
+                "Toronto"
+            ],
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "covers": [
+                14817209
+            ],
+            "latest_revision": 7,
+            "revision": 7,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2008-11-08T17:17:41.660199"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-09-16T17:36:56.475202"
+            }
+        },
+        {
+            "publishers": [
+                "Distribooks"
+            ],
+            "weight": "8.8 ounces",
+            "covers": [
+                4915448
+            ],
+            "physical_format": "Paperback",
+            "key": "/books/OL9146134M",
+            "authors": [
+                {
+                    "key": "/authors/OL498120A"
+                }
+            ],
+            "subjects": [
+                "Literature - Classics / Criticism",
+                "Fiction",
+                "Spanish: Adult Fiction",
+                "Classics",
+                "Untranslated Fiction - Spanish",
+                "General"
+            ],
+            "languages": [
+                {
+                    "key": "/languages/spa"
+                }
+            ],
+            "title": "Matar Un Ruisenor / to Kill a Mockingbird",
+            "identifiers": {
+                "librarything": [
+                    "3092"
+                ],
+                "goodreads": [
+                    "2397461"
+                ]
+            },
+            "isbn_13": [
+                "9788484508557"
+            ],
+            "isbn_10": [
+                "8484508552"
+            ],
+            "publish_date": "November 2002",
+            "works": [
+                {
+                    "key": "/works/OL3140822W"
+                }
+            ],
+            "type": {
+                "key": "/type/edition"
+            },
+            "physical_dimensions": "7 x 4.5 x 1 inches",
+            "latest_revision": 9,
+            "revision": 9,
+            "created": {
+                "type": "/type/datetime",
+                "value": "2008-04-30T09:38:13.731961"
+            },
+            "last_modified": {
+                "type": "/type/datetime",
+                "value": "2024-04-25T18:28:49.362479"
+            }
+        }
+    ]
+}

@@ -6,7 +6,7 @@ from openLibrary.models.id import (
     OLID
 )
 from openLibrary.common.exceptions import OLClientError
-from openLibrary.common.client import OLBase
+from openLibrary.common.base import OLBase
 from openLibrary.constants import (
     _WORKS
 )
@@ -23,7 +23,7 @@ class Ratings(BaseModel, OLBase):
            OLClientError("OLID provided is not a work id")
 
         path = f"/{_WORKS}/{olid.olid}/ratings.json"
-        resp: Response = cls._get(path=path)
+        resp: Response = cls.__get(path=path)
 
         body = resp.json()
 

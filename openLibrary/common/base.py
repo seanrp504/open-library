@@ -14,7 +14,7 @@ class OLBase:
     _client = httpx.Client(timeout=TIMEOUT_CONFIG, follow_redirects=True)
 
     @classmethod
-    def _get(cls, path, subdomain: str =  None, params: dict = {}) -> httpx.Response:
+    def __get(cls, path, subdomain: str =  None, params: dict = {}) -> httpx.Response:
 
         url = f"https://{subdomain + '.' if subdomain is not None else ''}{BASE_DOMAIN}/{path}"
 
