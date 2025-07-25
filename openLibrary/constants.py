@@ -1,4 +1,6 @@
 import httpx
+import logging
+import os
 
 _ISBN = 'isbn'
 _OLID = 'olid'
@@ -48,3 +50,29 @@ OL_SORT = {
 }
 
 TIMEOUT_CONFIG = httpx.Timeout(10.0, connect=4.0, read=6.0)
+
+
+TRACE = os.getenv("TRACE")
+
+DEFAULT_LEVEL = logging.INFO
+
+if TRACE:
+    DEFAULT_LEVEL = logging.DEBUG
+
+FORMATTER = logging.Formatter(
+    fmt=" {asctime}.{msecs} - {name} - {funcName} - {levelname} - {message} :: {args}",
+    style='{',
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
+
+CONSOLE_HANDLER = logging.StreamHandler()
+CONSOLE_HANDLER.setFormatter(FORMATTER)
+
+FILE_HANDLER = None
+if os.getenv("FILE_LOGGING"):
+    FILE_HANDLER = logging.FileHandler(
+        f"{os.getcwd()}/open-library.log",
+        encoding="utf-8"
+    )
+    FILE_HANDLER.setFormatter(FORMATTER)
+

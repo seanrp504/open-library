@@ -5,19 +5,29 @@ from typing import Self, Tuple
 from openLibrary.models.id import (
     OLID
 )
+from openLibrary.models.search import (
+    OLSearch
+)
 from openLibrary.common.base import OLBase
 from openLibrary.common.exceptions import OLClientError
 from openLibrary.book import Book
 from openLibrary.constants import (
     _ISBN,
     _AUTHORS,
-    _COVERS,
-    _LCCN,
-    _OLID,
     _SEARCH,
-    _WORKS
+    _WORKS,
+    DEFAULT_LEVEL,
+    CONSOLE_HANDLER,
+    FILE_HANDLER
 )
 
+import logging
+
+logger = logging.getLogger(__name__)
+logger
+logger.setLevel(DEFAULT_LEVEL)
+logger.addHandler(CONSOLE_HANDLER)
+logger.addHandler(FILE_HANDLER) if FILE_HANDLER else None
 
 
 class Author(BaseModel, OLBase):
@@ -51,9 +61,9 @@ class Author(BaseModel, OLBase):
     @classmethod
     def getAuthor(cls, author: OLID):
         '''
-        get info about an author
+        get an author by their id
         '''
-        if not author:
+        if not author.is_author():
             raise OLClientError("no author")
         
         path = f'{_AUTHORS}/{author.olid}.json'
@@ -61,7 +71,7 @@ class Author(BaseModel, OLBase):
         return cls(**cls.__get(path=path).json())
     
     @classmethod
-    def _searchAuthor(cls, q: str) -> Tuple[int, Self]:
+    def search(cls, q: OLSearch) -> tuple[int, list[Self]]:
 
         '''
         search for an author by name
@@ -74,28 +84,30 @@ class Author(BaseModel, OLBase):
         
         Returns:
             (int, list[authors]):
-
-
         '''
 
         if not q:
-            raise OLClientError("no author")
+            raise OLClientError("no query")
         
-        path = f'{_SEARCH}/authors.json'
+        path = f'{_SEARCH}.json'
 
-        params = {
-            'q': q
-        }
+        params = q.model_dump(mode="json", exclude_unset=True)
 
         resp = cls.__get(path=path, params=params).json()
         count = resp['numFound']
 
+        auth = []
+        for d in resp.get('docs', []):
+            auth.extend([cls.getAuthor(a) for a in d.get('author_key', [])])
 
-        return count, [cls(**a) for a in resp['docs']]
+        else:
+            logger.debug(f"no results found for query: {params}")
+
+        return count, [cls(**a) for a in auth]
     
 
     @classmethod
-    def _getWorksByAuthor(cls, author: OLID, limit: int = 100, offset: int = 0):
+    def getWorksByAuthor(cls, author: OLID, limit: int = 100, offset: int = 0):
 
         '''
         get works by an other, by searching their open library id

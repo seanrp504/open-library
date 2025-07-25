@@ -1,6 +1,7 @@
 from httpx import Response
 from pydantic import BaseModel
 from typing import Self
+import logging
 
 from openLibrary.models.id import (
     OLID
@@ -8,8 +9,16 @@ from openLibrary.models.id import (
 from openLibrary.common.exceptions import OLClientError
 from openLibrary.common.base import OLBase
 from openLibrary.constants import (
-    _WORKS
+    _WORKS,
+    DEFAULT_LEVEL,
+    CONSOLE_HANDLER,
+    FILE_HANDLER
 )
+
+logger = logging.getLogger(__name__)
+logger.setLevel(DEFAULT_LEVEL)
+logger.addHandler(CONSOLE_HANDLER)
+logger.addHandler(FILE_HANDLER) if FILE_HANDLER else None
 
 class Ratings(BaseModel, OLBase):
     average: float

@@ -1,8 +1,9 @@
 from httpx import Response
-from pydantic import BaseModel, computed_field, field_validator, HttpUrl
+from pydantic import BaseModel, computed_field, field_validator
 from pydantic_extra_types.isbn import ISBN
 from datetime import datetime, date
 from typing import Any, Self
+import logging
 
 from openLibrary.models.id import (
     OLID,
@@ -24,10 +25,16 @@ from openLibrary.constants import (
     _ISBN,
     _BOOKS,
     _SEARCH,
-    _WORKS
+    _WORKS,
+    DEFAULT_LEVEL,
+    CONSOLE_HANDLER,
+    FILE_HANDLER
 )
 
-
+logger = logging.getLogger(__name__)
+logger.setLevel(DEFAULT_LEVEL)
+logger.addHandler(CONSOLE_HANDLER)
+logger.addHandler(FILE_HANDLER) if FILE_HANDLER else None
 
 
 class Book(BaseModel, OLBase):
@@ -79,7 +86,7 @@ class Book(BaseModel, OLBase):
         if not olid.is_work():
             raise OLClientError("Not a work id")
         
-        path = f'/{_WORKS}/{olid.olid}'
+        path = f'{_WORKS}/{olid.olid}'
 
         resp = cls.__get(path=path).json()
 
@@ -93,12 +100,33 @@ class Book(BaseModel, OLBase):
         
         params = q.model_dump(mode="json", exclude_unset=True)
 
-        path = f'/{_SEARCH}.json'
+        path = f'{_SEARCH}.json'
 
         resp = cls.__get(path=path, params=params).json()
         hits = resp['numFound']
 
-        return hits,  [cls.get(olid=OLID(cls.clean_slash(r['key']))) for r in resp['docs']],
+        return hits,  [cls.get(olid=OLID(cls.clean_slash(r['key']))) for r in resp['docs']]
+    
+
+    def get_covers(self,  size: str = coverSize.large) -> list[bytes]:
+        '''
+        gets the covers for the current book, as bytes
+        
+        Args:
+            size (coverSize): ( S, M or L )
+        
+        Returns:
+            bytes:
+        '''
+        cov = []
+        for c in self.covers:
+
+    
+            path = f'b/id/{c}-{size}.jpg'
+            
+            cov.append(bytes(self.__get(path=path).content))
+        
+        return cov
 
     @computed_field
     @property
@@ -109,13 +137,22 @@ class Book(BaseModel, OLBase):
         eds = Editions.get_editions(self.key)
 
         return [BookEdition.get(OLID(self.clean_slash(e['key']))) for e in eds]
+    
+    @computed_field
+    @property
+    def ratings(self) -> Ratings:
+        '''
+        list of ratings for the book
+        '''
+
+        return Ratings.get(OLID(self.key))
 
 
 
 class BookEdition(BaseModel, OLBase):
     '''
     this model represents an edition of a work
-    this model contains more data about a specific version of a book (Book Model). 
+    this model contains more data about a specific version of a Work (Book Model). 
     '''
     publishers: list[str] | None = None
     number_of_pages: int | None = None
@@ -215,9 +252,9 @@ class BookEdition(BaseModel, OLBase):
         return cls.__get(path=path)
     
     
-    def get_covers(self,  size: coverSize = coverSize(size='L')) -> list[bytes]:
+    def get_cover(self,  size: str = coverSize.large) -> bytes:
         '''
-        gets the covers for the current book, as bytes
+        gets the cover for the current book, as bytes
         
         Args:
             size (coverSize): ( S, M or L )
@@ -225,29 +262,8 @@ class BookEdition(BaseModel, OLBase):
         Returns:
             bytes:
         '''
-        cov = []
-        for c in self.covers:
 
-    
-            path = f'/b/id/{c}-{size.size}.jpg'
-            
-            cov.append(bytes(self.__get(path=path).content))
+        path = f'b/id/{self.covers[0]}-{size}.jpg'
         
-        return cov
-        
+        return bytes(self.__get(path=path).content)
 
-    @computed_field
-    @property
-    def ratings(self) -> list[Ratings]:
-        '''
-        ratings object for book
-        '''
-        return Ratings.get(self.key)
-
-    @computed_field
-    @property
-    def editions(self) -> list[Editions]:
-        '''
-        list of editions of book
-        '''
-        return Editions.get_editions(self.key)

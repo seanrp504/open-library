@@ -56,17 +56,17 @@ class SupportsRange(BaseModel):
 
     @computed_field
     @property
-    def from_start(self):
+    def from_start(self) -> str:
         return f"[{self.start} TO *]"
     
     @computed_field
     @property
-    def from_end(self):
+    def from_end(self) -> str:
         return f"[* TO {self.end}]"
     
     @computed_field
     @property
-    def from_start_to_end(self):
+    def from_start_to_end(self) -> str:
         return f"[{self.start} TO {self.end}]"
 
 class DDC(BaseModel):
@@ -104,7 +104,7 @@ class Solr(BaseModel):
     
     @computed_field
     @property
-    def time_range(self):
+    def time_range(self) -> str:
         key = "first_publish_year"
         r = {}
 
@@ -172,9 +172,3 @@ class OLSearch(BaseModel):
             raise OLValidationError("There must be a search query")
         
         return self
-    
-    @model_validator("q", mode="before")
-    @classmethod
-    def q_to_solr(cls, q: Solr):
-        return q.solr
-

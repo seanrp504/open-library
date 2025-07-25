@@ -7,13 +7,14 @@ authors = [
 ]
 license = {text = "MIT"}
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.11, <4.0"
 dependencies = [
     "pydantic (>=2.11.7,<3.0.0)",
     "pydantic-extra-types (>=2.10.5,<3.0.0)",
     "httpx[http2] (>=0.28.1,<0.29.0)",
     "pytest (>=8.4.1,<9.0.0)",
-    "textblob (>=0.19.0,<0.20.0)"
+    "textblob (>=0.19.0,<0.20.0)",
+    "pycountry (>=24.6.1,<25.0.0)",
 ]
 
 [build-system]
@@ -30,4 +31,45 @@ include = "openLibrary"
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.4.1"
 faker = "^37.4.0"
+pytest-mock = "^3.14.1"
+pytest-asyncio = "^1.1.0"
+pytest-cov = "^6.2.1"
+commitizen = "^4.8.3"
+pre-commit = "^4.2.0"
+ruff = "^0.12.5"
+flake8 = "^7.3.0"
 
+
+[tool.poetry.group.build.dependencies]
+twine = "^6.1.0"
+
+
+[tool.pytest.ini_options]
+addopts = "--cov=openLibrary --cov-report=term --cov-fail-under=85 --cov-report=term-missing"
+testpaths = ["tests"]
+
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.1.0"
+version_files = [
+    "src/__version__.py",
+    "pyproject.toml:version"
+]
+tag_format = "v$version"
+allow_abort = false
+update_changelog_on_bump = true
+style = [
+    ["qmark", "fg:#ff9d00 bold"],
+    ["question", "bold"],
+    ["answer", "fg:#ff9d00 bold"],
+    ["pointer", "fg:#ff9d00 bold"],
+    ["highlighted", "fg:#ff9d00 bold"],
+    ["selected", "fg:#cc5454"],
+    ["separator", "fg:#cc5454"],
+    ["instruction", ""],
+    ["text", ""],
+    ["disabled", "fg:#858585 italic"]
+]
+bump_message = "chore(release): $current_version -> $new_version"
+version_scheme = "semver2"

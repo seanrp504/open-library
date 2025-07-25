@@ -1,8 +1,26 @@
 
+.PHONY: test
 
 dev:
-	poetry install # TODO add pre-commit
-	echo "DONE!"
+	@poetry install --with dev,build
+	@poetry run pre-commit install
+	@echo "DONE"
+
+hooks:
+	@poetry run pre-commit install
+
+lint: # suppress exit codes with `|| true` so that both linters can run
+	@poetry run ruff check openLibrary tests || true
+	@poetry run flake8 openLibrary tests || true
+
+bump:
+	@poetry run cz bump
+
+build:
+	@poetry build
 
 test: 
-	poetry run pytest --cov=openLibrary --cov-report=term-missing --cov-fail-under=85 --durations=5 --tb=short 
+	@poetry run pytest
+
+clean:
+	rm -rf dist/ build/ .pytest_cache/ .coverage mdcov/

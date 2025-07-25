@@ -1,13 +1,23 @@
+import httpx
+from urllib.parse import urlencode
+import logging
+import json
+
 from openLibrary.constants import (
     BASE_DOMAIN,
     SLASH,
-    TIMEOUT_CONFIG
+    TIMEOUT_CONFIG,
+    DEFAULT_LEVEL,
+    CONSOLE_HANDLER,
+    FILE_HANDLER
 )
 
 
-import httpx
-from typing import Optional
-from urllib.parse import urlencode 
+
+logger = logging.getLogger(__name__)
+logger.setLevel(DEFAULT_LEVEL)
+logger.addHandler(CONSOLE_HANDLER)
+logger.addHandler(FILE_HANDLER) if FILE_HANDLER else None
 
 
 class OLBase:
@@ -18,13 +28,27 @@ class OLBase:
 
         url = f"https://{subdomain + '.' if subdomain is not None else ''}{BASE_DOMAIN}/{path}"
 
+        logger.info(f"GET: {urlencode(url)}")
+        logger.debug(F"pararms: {json.dumps(params, indent=2, sort_keys=True)}")
+
         resp = cls._client.get(urlencode(url), params=params)
-        resp.raise_for_status()
+        
+        try:
+            resp.raise_for_status()
+
+        except Exception as e:
+            logger.error(f"Error in GET: {e.with_traceback()}")
+            raise e
+        
+        finally:
+            logger.info(f"GET: time elasped {resp.elapsed}")
+            logger.debug(f"GET: recieved {resp.num_bytes_downloaded} bytes")
+        
         return resp
     
-    def _post():
+    def __post():
         # TODO: support this at some point, 
-        pass
+        raise NotImplementedError()
 
    
     @classmethod
@@ -55,6 +79,6 @@ class OLBase:
     @classmethod
     def clean_slash(cls, val: str) -> str:
         if val.count('/') >= 2:
-            return val.split('/')[-2]
+            return val.split('/')[-1]
                         
 
