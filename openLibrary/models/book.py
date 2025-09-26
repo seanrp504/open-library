@@ -17,8 +17,7 @@ from openLibrary.models.data import (
 )
 from openLibrary.models.search import OLSearch
 from openLibrary.ratings import Ratings
-from openLibrary.editions import Editions
-from openLibrary.authors import Author
+from openLibrary.models.editions import Editions
 from openLibrary.common.exceptions import OLClientError
 from openLibrary.common.base import OLBase
 from openLibrary.constants import (
@@ -50,7 +49,7 @@ class Book(BaseModel, OLBase):
     first_sentence: str
     subject_places: list[str]
     excerpts: list[Excerpt]
-    first_publist_date: date
+    first_publish_date: date
     subject_people: list[str]
     location: OLID
     key: OLID
@@ -58,7 +57,6 @@ class Book(BaseModel, OLBase):
     subject_times: list[str]
     type: Key
     subjects: list[str]
-    lc_classification: list[str]
     latest_revision: int
     revision: int
     created: datetime
@@ -160,10 +158,11 @@ class BookEdition(BaseModel, OLBase):
     weight: str | None = None
     isbn_10: ISBN | None = None
     covers: list[int] | None = None # TODO backfill this with a covers class?
-    pyshical_format: str | None = None
+    physical_format: str | None = None
     lc_classification: list[str] | None = None
     key: OLID | None = None
     authors: list[str] | None = None # TODO make this class backfill this with authors model
+    ocaid: str | None =  None
     publish_places: list[str] | None = None
     languages: str | None = None
     source_records: list[str] | None = None
@@ -171,46 +170,18 @@ class BookEdition(BaseModel, OLBase):
     notes: str | None = None
     identifiers: dict[str, Any] | None = None
     isbn_13: ISBN | None = None
-    edition_name = str | None = None
+    edition_name: str | None = None
     subjects: list[str] | None = None
-    subjects_places: list[str] | None = None
-    subject_people: list[str] | None = None
     publish_date: str | None = None
     copyright_date: str | None = None
     works: list[str] | None = None
+    type: str = 'edition'
     physical_dimensions: str | None = None
     latest_revision: int | None = None
     revision: int | None = None
     created: datetime | None = None
     last_modified: datetime | None = None
 
-    @field_validator('isbn_10','covers', 'lc_classifications',\
-                     'isbn_13', mode="before")
-    @classmethod
-    def list_unpack(cls, val: list):
-        return val[0]
-
-
-    @field_validator('description', 'notes', 'created', 'last_modified', mode="before")
-    @classmethod
-    def dict_unpack(cls, val: dict):
-        return val['value']
-    
-    
-    @field_validator('authors', 'languages', 'works', mode="before")
-    @classmethod
-    def nested_unpack(cls, val: list):
-        return [cls.clean_slash(cls.key_unpack(v['author'] if 'author' in v else v)) for v in val]
-    
-    @field_validator('type', mode="before") 
-    @classmethod
-    def key_unpack(cls, val: dict):
-        return cls.clean_slash(val['key'])
-    
-    @field_validator('key', mode="before")
-    @classmethod
-    def clean_string(cls, val: str):
-        return cls.clean_slash(val)
 
     @classmethod
     def get(cls, id: OLID | ISBN) -> Self | None:
@@ -221,14 +192,54 @@ class BookEdition(BaseModel, OLBase):
             case OLID():
                 book = cls._getBookByOLID(id)
             case ISBN():
-                book = cls._getBookByISBN(id)
+                book = cls._getBookByISBN(id).json()
+                key = cls.clean_slash(book.get('key'))
+                try:
+                    book = cls._getBookByOLID(OLID(olid=key))
+                except Exception:
+                    logger.info(f"failed to validate or fetch book by key {key}, continuing with naive object", exc_info=True)
             case _:
                 book = None
         
-        if book:
-            return cls(**book.json())
-        
+        if isinstance(book, Response):
+            book: dict = book.json()
+            return cls.unpack(book)
+          
         return None
+    
+    @classmethod
+    def unpack(cls, book: dict):
+
+        return cls(
+                publishers=book.get('publishers'),
+                number_of_pages=book.get('number_of_pages'),
+                description=book.get('description', {}).get('value'),
+                weight=book.get('weight'),
+                isbn_10=next(iter(book.get('isbn_10', [])), None),
+                covers=book.get('covers', []),
+                physical_format=book.get('physical_format'),
+                lc_classification=book.get('lc_classifications'),
+                key=OLID(olid=cls.clean_slash(book.get('key'))),
+                authors=[cls.clean_slash(a.get('key')) for a in book.get('authors', [])] or None,
+                publish_places=book.get('publish_places'),
+                languages=[cls.clean_slash(l.get('key'))  for l in book.get('languages', [])] or None,
+                source_records=book.get('source_records'),
+                title=book.get('title'),
+                notes=book.get('notes', {}).get('value'),
+                identifiers=book.get('identifiers'),
+                isbn_13=next(iter(book.get('isbn_13', [])), None),
+                edition_name=book.get('edition_name'),
+                subject=book.get('subjects'),
+                subject_places=book.get('subject_places'),
+                subject_people=book.get('subject_people'),
+                publish_date=book.get('publish_date'),
+                copyright_date=book.get('copyright_date'),
+                works=[cls.clean_slash(w.get('key')) for w in book.get('works', [])] or None,
+                physical_dimensions=book.get('physical_dimensions'),
+                latest_revision=book.get('latest_revision'),
+                created=book.get('created', {}).get('value'),
+                last_modified=book.get('last_modified', {}).get('value')
+            )
 
 
     @classmethod
@@ -239,7 +250,7 @@ class BookEdition(BaseModel, OLBase):
         
         path = f'{_ISBN}/{isbn}.json'
             
-        return cls.__get(path=path)
+        return cls._get(path=path)
     
     @classmethod
     def _getBookByOLID(cls, olid: OLID) -> Response:
@@ -249,10 +260,10 @@ class BookEdition(BaseModel, OLBase):
         
         path = f'{_BOOKS}/{olid.olid}.json'
 
-        return cls.__get(path=path)
+        return cls._get(path=path)
     
     
-    def get_cover(self,  size: str = coverSize.large) -> bytes:
+    def get_cover(self,  size: str = coverSize.large) -> bytes | None:
         '''
         gets the cover for the current book, as bytes
         
@@ -263,7 +274,10 @@ class BookEdition(BaseModel, OLBase):
             bytes:
         '''
 
+        if not self.covers:
+            return None
+
         path = f'b/id/{self.covers[0]}-{size}.jpg'
         
-        return bytes(self.__get(path=path).content)
+        return bytes(self._get(path=path).content)
 

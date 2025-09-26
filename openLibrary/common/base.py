@@ -1,5 +1,5 @@
 import httpx
-from urllib.parse import urlencode
+import traceback
 import logging
 import json
 
@@ -24,21 +24,21 @@ class OLBase:
     _client = httpx.Client(timeout=TIMEOUT_CONFIG, follow_redirects=True)
 
     @classmethod
-    def __get(cls, path, subdomain: str =  None, params: dict = {}) -> httpx.Response:
+    def _get(cls, path, subdomain: str =  None, params: dict = {}) -> httpx.Response:
 
         url = f"https://{subdomain + '.' if subdomain is not None else ''}{BASE_DOMAIN}/{path}"
 
-        logger.info(f"GET: {urlencode(url)}")
+        logger.info(f"GET: {url}")
         logger.debug(F"pararms: {json.dumps(params, indent=2, sort_keys=True)}")
 
-        resp = cls._client.get(urlencode(url), params=params)
+        resp = cls._client.get(url, params=params)
         
         try:
             resp.raise_for_status()
 
         except Exception as e:
-            logger.error(f"Error in GET: {e.with_traceback()}")
-            raise e
+            logger.error(f"Error in GET", exc_info=True)
+            raise e.with_traceback(e.__traceback__)
         
         finally:
             logger.info(f"GET: time elasped {resp.elapsed}")

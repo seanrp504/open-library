@@ -60,7 +60,7 @@ if TRACE:
     DEFAULT_LEVEL = logging.DEBUG
 
 FORMATTER = logging.Formatter(
-    fmt=" {asctime}.{msecs} - {name} - {funcName} - {levelname} - {message} :: {args}",
+    fmt=" {asctime}.{msecs} - {levelname} - {name} - {funcName} - {message} :: {args}",
     style='{',
     datefmt="%Y-%m-%d %H:%M:%S"
 )

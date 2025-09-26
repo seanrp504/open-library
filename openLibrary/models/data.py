@@ -12,7 +12,7 @@ class Excerpt(BaseModel):
 class Key(BaseModel):
     key: str
 
-    @field_validator
+    @field_validator('key')
     @classmethod
     def unpack(cls, key: str):
         return OLBase.clean_slash(key)

@@ -17,7 +17,7 @@ import re
 
 
 
-DEWEY_SEARCH_PATTERN = re.compile(r'^\d{1,3}\*?$')
+DEWEY_SEARCH_PATTERN = re.compile(r"^\d{1,3}\*?$")
 
 class Sort(Enum):
     editions = "editions"
@@ -87,10 +87,10 @@ class Solr(BaseModel):
     title: str | None = None
     subtitle: str | None = None
     authors: list[str] | None = None
-    subject: list[str] | None = None
-    place: list[str] | None = None
-    person: list[str] | None = None
-    publisher: list[str] | None = None
+    subjects: list[str] | None = None
+    places: list[str] | None = None
+    persons: list[str] | None = None
+    publishers: list[str] | None = None
     first_publish_year: SupportsRange | None = None
     ddc: DDC | None = None
     isbn: ISBN | None = None
@@ -98,24 +98,26 @@ class Solr(BaseModel):
 
     @model_validator(mode="after")
     def validate_min_one(self):
-        if not any(f for f, _ in self.model_dump(exclude_unset=True)):
+        if not any(self.model_fields_set):
             raise ValueError('At least one value must be present to create a Query object')
         return self
     
     @computed_field
     @property
-    def time_range(self) -> str:
-        key = "first_publish_year"
-        r = {}
+    def time_range(self) -> str | None:
+        if not self.first_publish_year:
+            return None
+
+        r  = None
 
         if self.first_publish_year.start and self.first_publish_year.end:
-            r.update({key: f"[{self.first_publish_year.start} TO {self.first_publish_year.end}]"})
+            r = f"[{self.first_publish_year.start} TO {self.first_publish_year.end}]"
         
         elif self.first_publish_year.start:
-            r.update({key: f"[{self.first_publish_year.start} TO *]"})
+            r = f"[{self.first_publish_year.start} TO *]"
     
         elif self.first_publish_year.end:
-            r.update({key: f"[* TO {self.first_publish_year.end}]"})
+            r = f"[* TO {self.first_publish_year.end}]"
         
         return r
 
@@ -125,30 +127,33 @@ class Solr(BaseModel):
         ''' conver the model to a solr query'''
         query = []
 
-        fields = self.model_dump(exclude_unset=True)
+        fields = self.model_fields_set
 
-        for f, v in fields:
+        for name in fields:
+            n = self.singular(name)
             
-
-            if f.startswith("publish_"):
-                pass
-
-            elif isinstance(v, Iterable):
-                field_values = []
-                for i in v:
-                    field_values.append(f'{f}:"{i}"')
-                
-                ored = " OR ".join(field_values)
-                query.append(f"({ored})")
+            if name.startswith("first_publish"):
+                query.append(f"{n}:{self.time_range}") if self.time_range else None
 
             else:
-                query.append(f'{f}:"{v}"')
-        
-        query.append(self.time_range) if self.time_range else None
+                val = getattr(self, name)
+
+                if isinstance(val, Iterable) and not isinstance(val, str):
+
+                    field_values = []
+                    for i in val:
+                        field_values.append(f'{n}:"{i}"')
+                
+                    ored = " OR ".join(field_values)
+                    query.append(f"({ored})" if "OR" in ored else f"{ored}")
+
+                else:
+                    query.append(f'{n}:"{val}"')
         
         return " AND ".join(query)
 
-
+    def singular(self, plural: str) -> str:
+        return plural.removesuffix('s')
 
 
 class OLSearch(BaseModel):

@@ -1,4 +1,3 @@
-
 from openLibrary.common.exceptions import OLValidationError
 from pydantic import (
     BaseModel,
@@ -19,16 +18,16 @@ DDS_PATTER = re.compile( r'^\d{3}(\.\d{1,10})?$' )
     
 
 class OLID(BaseModel):
-    ''' 
+    '''
     Model for Open Library IDs 
 
     Args:
-        olid (str): an open library id 
-            normalized to uppercase 
-            validated by -> r'OL\d+(WMA)'
+        olid (str): an open library id \
+            normalized to uppercase \
+            validated by -> r'OL\\d+(WMA)'
     
     Returns: 
-        OLID: An OLID object
+        Self (OLID): An OLID object
 
     Raises: 
         ValidationError: If fails regex

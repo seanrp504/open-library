@@ -45,7 +45,7 @@ twine = "^6.1.0"
 
 
 [tool.pytest.ini_options]
-addopts = "--cov=openLibrary --cov-report=term --cov-fail-under=85 --cov-report=term-missing"
+addopts = "--cov=openLibrary --cov-report=term --cov-fail-under=85 --cov-report=term-missing -v --capture=no -s"
 testpaths = ["tests"]
 
 

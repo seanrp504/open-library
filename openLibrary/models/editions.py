@@ -29,7 +29,7 @@ class Editions(BaseModel, OLBase):
     idenifiers: dict[str, Any]
     local_id: str
     publish_date: date
-    publisers: list[str]
+    publishers: list[str]
     source_records: list[str]
     title: str
     full_title: str

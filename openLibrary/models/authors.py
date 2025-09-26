@@ -8,9 +8,11 @@ from openLibrary.models.id import (
 from openLibrary.models.search import (
     OLSearch
 )
+from openLibrary.models.data import (
+    Links
+)
 from openLibrary.common.base import OLBase
 from openLibrary.common.exceptions import OLClientError
-from openLibrary.book import Book
 from openLibrary.constants import (
     _ISBN,
     _AUTHORS,
@@ -38,8 +40,8 @@ class Author(BaseModel, OLBase):
     source_records: list[str]
     name: str
     birth_date: str
-    links: list[dict]
-    type: str
+    links: list[dict] | None
+    type: str = 'author'
     key: OLID
     bio: str
     death_date: str | None = None
@@ -48,15 +50,24 @@ class Author(BaseModel, OLBase):
     created: datetime
     last_modified: datetime
 
-    @field_validator('created', 'last_modified', 'bio', mode="before")
     @classmethod
-    def dict_unpack(cls, val: dict):
-        return val['value']
-
-    @field_validator('type', 'key', mode="before")
-    @classmethod
-    def key_unpack(cls, val: dict):
-        return cls.clean_slash(val['key'])
+    def unpack(cls, author: dict) -> Self:
+        return cls(
+            photos=author.get('photos'),
+            alternate_names=author.get('alternate_names'),
+            personal_name=author.get('personal_name'),
+            remote_ids=author.get('remote_ids'),
+            key=cls.clean_slash(author.get('key')),
+            name=author.get('name'),
+            birth_date=author.get('birth_date'),
+            links=[l.get('url') for l in author.get('links', [])] or None,
+            bio=author.get('bio', {}).get('value'),
+            death_date=author.get('death_date'),
+            latest_revision=author.get('latest_revision'),
+            revision=author.get('revision'),
+            created=author.get('created', {}).get('value'),
+            last_modified=author.get('last_modified', {}).get('value')
+        )
 
     @classmethod
     def getAuthor(cls, author: OLID):
@@ -68,7 +79,7 @@ class Author(BaseModel, OLBase):
         
         path = f'{_AUTHORS}/{author.olid}.json'
 
-        return cls(**cls.__get(path=path).json())
+        return cls.unpack(cls._get(path=path).json())
     
     @classmethod
     def search(cls, q: OLSearch) -> tuple[int, list[Self]]:
@@ -93,7 +104,7 @@ class Author(BaseModel, OLBase):
 
         params = q.model_dump(mode="json", exclude_unset=True)
 
-        resp = cls.__get(path=path, params=params).json()
+        resp = cls._get(path=path, params=params).json()
         count = resp['numFound']
 
         auth = []
@@ -103,7 +114,7 @@ class Author(BaseModel, OLBase):
         else:
             logger.debug(f"no results found for query: {params}")
 
-        return count, [cls(**a) for a in auth]
+        return count, [cls.unpack(a) for a in auth]
     
 
     @classmethod
@@ -126,9 +137,9 @@ class Author(BaseModel, OLBase):
             'offset': offset
         }
 
-        resp =  cls.__get(path=path, params=params).json()
+        resp =  cls._get(path=path, params=params).json()
         count = resp['size']
 
 
-        return count, [Book(**a) for a in resp['docs']]
+        return count, [a for a in resp['docs']]
 
