@@ -16,7 +16,7 @@ from openLibrary.models.data import (
     AuthorDict
 )
 from openLibrary.models.search import OLSearch
-from openLibrary.ratings import Ratings
+from openLibrary.models.ratings import Ratings
 from openLibrary.models.editions import Editions
 from openLibrary.common.exceptions import OLClientError
 from openLibrary.common.base import OLBase

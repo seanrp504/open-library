@@ -145,7 +145,7 @@ class Solr(BaseModel):
                         field_values.append(f'{n}:"{i}"')
                 
                     ored = " OR ".join(field_values)
-                    query.append(f"({ored})" if "OR" in ored else f"{ored}")
+                    query.append(f"({ored})")
 
                 else:
                     query.append(f'{n}:"{val}"')

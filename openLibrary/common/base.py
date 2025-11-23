@@ -1,5 +1,4 @@
 import httpx
-import traceback
 import logging
 import json
 
@@ -14,39 +13,39 @@ from openLibrary.constants import (
 
 
 
-logger = logging.getLogger(__name__)
-logger.setLevel(DEFAULT_LEVEL)
-logger.addHandler(CONSOLE_HANDLER)
-logger.addHandler(FILE_HANDLER) if FILE_HANDLER else None
-
 
 class OLBase:
-    _client = httpx.Client(timeout=TIMEOUT_CONFIG, follow_redirects=True)
 
-    @classmethod
-    def _get(cls, path, subdomain: str =  None, params: dict = {}) -> httpx.Response:
+    def __init__(self, timeout_config):
+        self._client = httpx.Client(timeout=timeout_config, follow_redirects=True)
+        self.logger = logging.getLogger(__name__)
+        self.logger.setLevel(DEFAULT_LEVEL)
+        self.logger.addHandler(CONSOLE_HANDLER)
+        self.logger.addHandler(FILE_HANDLER) if FILE_HANDLER else None
+
+    def _get(self, path, subdomain: str =  None, params: dict = {}) -> httpx.Response:
 
         url = f"https://{subdomain + '.' if subdomain is not None else ''}{BASE_DOMAIN}/{path}"
 
-        logger.info(f"GET: {url}")
-        logger.debug(F"pararms: {json.dumps(params, indent=2, sort_keys=True)}")
+        self.logger.info(f"GET: {url}")
+        self.logger.debug(F"pararms: {json.dumps(params, indent=2, sort_keys=True)}")
 
-        resp = cls._client.get(url, params=params)
+        resp = self._client.get(url, params=params)
         
         try:
             resp.raise_for_status()
 
         except Exception as e:
-            logger.error(f"Error in GET", exc_info=True)
+            self.logger.error(f"Error in GET", exc_info=True)
             raise e.with_traceback(e.__traceback__)
         
         finally:
-            logger.info(f"GET: time elasped {resp.elapsed}")
-            logger.debug(f"GET: recieved {resp.num_bytes_downloaded} bytes")
+            self.logger.info(f"GET: time elasped {resp.elapsed}")
+            self.logger.debug(f"GET: recieved {resp.num_bytes_downloaded} bytes")
         
         return resp
     
-    def __post():
+    def _post():
         # TODO: support this at some point, 
         raise NotImplementedError()
 
