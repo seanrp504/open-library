@@ -9,7 +9,7 @@ from pydantic import (
 from enum import Enum
 from pydantic_extra_types.language_code import LanguageAlpha2
 from pydantic_extra_types.isbn import ISBN
-from typing import Optional, List
+from typing import List
 from openLibrary.common.exceptions import OLValidationError
 from openLibrary.constants import OL_SORT
 from collections.abc import Iterable

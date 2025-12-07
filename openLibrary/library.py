@@ -7,6 +7,7 @@ from openLibrary.models.id import (
     OLID
 )
 from models.authors import Author
+from models.book import Book, BookEdition
 from openLibrary.models.search import OLSearch
 from openLibrary.common.exceptions import OLClientError
 from openLibrary.common.base import OLBase
@@ -21,8 +22,14 @@ from openLibrary.constants import (
     TIMEOUT_CONFIG
 )
 
+MODEL_KEYS = {
+    Author: 'author_key',
+    Book: 'key',
+    BookEdition: ''
+}
 
-class openLibrary(OLBase):
+
+class OpenLibrary(OLBase):
     """
     Open Library Client
 
@@ -50,64 +57,33 @@ class openLibrary(OLBase):
         # TODO: implement account/ login here
 
         super.__init__(self.TIMEOUT_CONFIG)
-    
-        
-    def work():
-        None
 
-    def edition():
-        None
-    
-    def cover():
-        None
-    
-    def search_author(self, q: OLSearch) -> tuple[int, list[Author]]:
-
-        '''
-        search for an author using OLSearch
-
-        Args:
-            q (str): a query string
-        
-        Raises:
-            OLClientError:
-        
-        Returns:
-            (int, list[authors]):
-        '''
-
+    def _search(self, q: OLSearch) -> dict:
         if not q:
-            raise OLClientError("no query")
+            raise OLClientError("no query given")
         
         path = f'{_SEARCH}.json'
 
         params = q.model_dump(mode="json", exclude_unset=True)
 
-        resp: dict = self._get(path=path, params=params).json()
-        count = resp['numFound']
-
-        auth = []
-        for d in resp.get('docs', []):
-            auth.extend([self.get_author(a) for a in d.get('author_key', [])])
-
-        else:
-            self.logger.debug(f"no results found for query: {params}")
-
-        return count, auth
+        return self._get(path=path, params=params).json()
     
-    def get_author(self, author: OLID):
-        '''
-        get an author by their id
-        '''
-        if not author.is_author():
-            raise OLClientError("no author ID given")
-        
-        path = f'{_AUTHORS}/{author.olid}.json'
 
-        return Author.unpack(self._get(path=path).json())
+    def search(self, q: OLSearch, resource_types: list):
+        resp = self._search(q)
 
-    def rating():
-        None
+        docs = resp.get('docs', [])
 
+        results = []
+        for d in docs:
+            resource = []
+            for r in resource_types:
+                resource.append(r.get(d.get(MODEL_KEYS[r])))
+            
+            results.append(resource)
+            
+        else:
+             self.logger.debug(f"no results found for query: {q.model_dump(mode="json", exclude_unset=True)}")
 
+        return results
 

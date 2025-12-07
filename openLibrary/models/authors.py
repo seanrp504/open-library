@@ -8,7 +8,7 @@ from openLibrary.models.id import (
 from openLibrary.models.search import (
     OLSearch
 )
-from openLibrary.models.data import (
+from openLibrary.models.other import (
     Links
 )
 from openLibrary.common.base import OLBase
@@ -70,10 +70,12 @@ class Author(BaseModel, OLBase):
         )
 
     @classmethod
-    def getAuthor(cls, author: OLID):
+    def get(cls, author_id: str):
         '''
         get an author by their id
         '''
+
+        author = OLID(author_id)
         if not author.is_author():
             raise OLClientError("no author")
         
@@ -81,44 +83,9 @@ class Author(BaseModel, OLBase):
 
         return cls.unpack(cls._get(path=path).json())
     
-    @classmethod
-    def search(cls, q: OLSearch) -> tuple[int, list[Self]]:
-
-        '''
-        search for an author by name
-
-        Args:
-            q (str): a query string
-        
-        Raises:
-            OLClientError:
-        
-        Returns:
-            (int, list[authors]):
-        '''
-
-        if not q:
-            raise OLClientError("no query")
-        
-        path = f'{_SEARCH}.json'
-
-        params = q.model_dump(mode="json", exclude_unset=True)
-
-        resp = cls._get(path=path, params=params).json()
-        count = resp['numFound']
-
-        auth = []
-        for d in resp.get('docs', []):
-            auth.extend([cls.getAuthor(a) for a in d.get('author_key', [])])
-
-        else:
-            logger.debug(f"no results found for query: {params}")
-
-        return count, [cls.unpack(a) for a in auth]
-    
 
     @classmethod
-    def getWorksByAuthor(cls, author: OLID, limit: int = 100, offset: int = 0):
+    def get_works(cls, author: OLID, limit: int = 100, offset: int = 0):
 
         '''
         get works by an other, by searching their open library id

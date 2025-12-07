@@ -32,7 +32,7 @@ class Ratings(BaseModel, OLBase):
            OLClientError("OLID provided is not a work id")
 
         path = f"/{_WORKS}/{olid.olid}/ratings.json"
-        resp: Response = cls.__get(path=path)
+        resp: Response = cls._get(path=path)
 
         body = resp.json()
 

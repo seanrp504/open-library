@@ -9,7 +9,7 @@ from openLibrary.models.id import (
     OLID,
     coverSize
 )
-from openLibrary.models.data import (
+from openLibrary.models.other import (
     Link,
     Key,
     Excerpt,
@@ -17,7 +17,6 @@ from openLibrary.models.data import (
 )
 from openLibrary.models.search import OLSearch
 from openLibrary.models.ratings import Ratings
-from openLibrary.models.editions import Editions
 from openLibrary.common.exceptions import OLClientError
 from openLibrary.common.base import OLBase
 from openLibrary.constants import (
@@ -80,31 +79,17 @@ class Book(BaseModel, OLBase):
         return cls.clean_slash(val)
     
     @classmethod
-    def get(cls, olid: OLID):
+    def get(cls, book_id: str):
+        olid = OLID(cls.clean_slash(book_id))
         if not olid.is_work():
             raise OLClientError("Not a work id")
         
         path = f'{_WORKS}/{olid.olid}'
 
-        resp = cls.__get(path=path).json()
+        resp = cls._get(path=path).json()
 
         return cls(**resp)
-    
-    @classmethod
-    def search(cls, q: OLSearch) -> tuple[int, list[Self]]:
 
-        if not q:
-            raise OLClientError("no search")
-        
-        params = q.model_dump(mode="json", exclude_unset=True)
-
-        path = f'{_SEARCH}.json'
-
-        resp = cls.__get(path=path, params=params).json()
-        hits = resp['numFound']
-
-        return hits,  [cls.get(olid=OLID(cls.clean_slash(r['key']))) for r in resp['docs']]
-    
 
     def get_covers(self,  size: str = coverSize.large) -> list[bytes]:
         '''
@@ -122,20 +107,10 @@ class Book(BaseModel, OLBase):
     
             path = f'b/id/{c}-{size}.jpg'
             
-            cov.append(bytes(self.__get(path=path).content))
+            cov.append(bytes(self._get(path=path).content))
         
         return cov
 
-    @computed_field
-    @property
-    def editions(self) -> list[Editions]:
-        '''
-        list of editions of book
-        '''
-        eds = Editions.get_editions(self.key)
-
-        return [BookEdition.get(OLID(self.clean_slash(e['key']))) for e in eds]
-    
     @computed_field
     @property
     def ratings(self) -> Ratings:
@@ -144,6 +119,19 @@ class Book(BaseModel, OLBase):
         '''
 
         return Ratings.get(OLID(self.key))
+    
+
+    def get_editions(self):
+
+        path = f'{_WORKS}/{self.key}/editions.json'
+
+        resp = self._get(path)
+
+        count = resp['size']
+
+        editions = [BookEdition.unpack(e) for e in resp['entries']]
+
+        return count, editions
 
 
 
